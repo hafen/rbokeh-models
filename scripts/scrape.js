@@ -6,6 +6,9 @@ $('li.toctree-l1.current.show').find('li > a').map(function() { return $(this).a
 // click on bokeh.models.glyphs
 $('li.toctree-l2.current').find('li > a').map(function() { return $(this).attr('href') }).get().join('\n')
 
+// click on bokeh.models.markers
+$('li.toctree-l2.current').find('li > a').map(function() { return $(this).attr('href') }).get().join('\n')
+
 /////// scraping script
 
 var items = $('dl.class');
@@ -13,6 +16,7 @@ var items = $('dl.class');
 var classes = items.map(function() {
   var className = $($($(this).children('dt').first()[0]).find('.descname')[0]).html()
 
+  // var dd = $($($('dl.class')).children('dd'))
   var dd = $($(this).children('dd'))
 
   var classText = $(dd[0]).children('p').map(function() {

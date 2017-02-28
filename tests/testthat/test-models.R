@@ -108,3 +108,26 @@ test_that("LayoutDOM matches", {
   expect_identical(jsn, protos$LayoutDOM)
 })
 
+
+test_that("LayoutDOM matches", {
+  obj <- LayoutDOM$new(id = "373908d6-3b02-4dfd-a5e6-1e84d8a927fa")
+  jsn <- as.character(obj$to_json(pretty = TRUE))
+  expect_identical(jsn,
+'{
+  "css_classes": null,
+  "disabled": false,
+  "height": null,
+  "id": "373908d6-3b02-4dfd-a5e6-1e84d8a927fa",
+  "js_callbacks": {},
+  "name": null,
+  "sizing_mode": "fixed",
+  "tags": [],
+  "width": null
+}')
+})
+
+
+
+
+
+
