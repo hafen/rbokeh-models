@@ -60,7 +60,7 @@ validate <- function(x, type) {
     }
   }
 
-  if (grepl("List \\(", type)) {
+  if (grepl("^List \\(", type)) {
     # List with scalar types and Seq with scalar types are the same
     subtype <- strip_white(gsub("^List \\((.*)\\)$", "\\1", type))
     if (subtype %in% ttrnsnm) {
@@ -120,7 +120,27 @@ validate <- function(x, type) {
       stop("Attribute ", name, " must a named list of scalars that are character or numeric",
         call. = FALSE)
 
+    for (ii in seq_along(x)) {
+      if (is.null(x[[ii]]))
+        x[[ii]] <- jsonlite::unbox(as.character(NA))
+    }
+
     return (lapply(x, function(a) jsonlite::unbox(a)))
+  }
+
+  if (grepl("^Either", type)) {
+    type <- strip_white(gsub("^Either \\((.*)\\)$", "\\1", type))
+    # the regex below splits on commas not inside parens
+    types <- strip_white(strsplit(type, ",(?![^()]*+\\))", perl = TRUE)[[1]])
+    types <- setdiff(types, "Auto")
+
+    for (tp in types) {
+      tmp <- try(validate(x, tp), silent = TRUE)
+      if (!inherits(tmp, "try-error")) {
+        x <- tmp
+        return(x)
+      }
+    }
   }
 
   if (type == "Any")
@@ -184,6 +204,13 @@ validate_enum <- function(x, type, name) {
 }
 
 validate_list <- function(x, named = FALSE, name) {
+  if (is.null(x) || is.na(x) || length(x) == 0) {
+    if (named) {
+      return (structure(list(), .Names = character(0)))
+    } else {
+      return (list())
+    }
+  }
   if (!is.list(x))
     stop("Attribute ", name, " must be a list", call. = FALSE)
   if (named && is.null(names(x)))
