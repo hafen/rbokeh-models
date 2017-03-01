@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Callback",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "Base class for interactive callback. Callback is generally\nnot useful to instantiate on its own."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"f0157d7d-091a-4bf3-925a-d61af0f5bff4\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "CustomJS",
+    "text": [
+      "Bases: bokeh.models.callbacks.Callback",
+      "Execute a JavaScript function."
+    ],
+    "attrs": [
+      {
+        "name": "args",
+        "descs": [
+          "property type: Dict ( String , Instance ( Model  ) )",
+          "A mapping of names to Bokeh plot objects. These objects are made\navailable to the callback code snippet as the values of named\nparameters to the callback."
+        ]
+      },
+      {
+        "name": "code",
+        "descs": [
+          "property type: String",
+          "A snippet of JavaScript code to execute in the browser. The\ncode is made into the body of a function, and all of of the named objects in\nargs are available as parameters that the code can use. Additionally,\na cb_obj parameter contains the object that triggered the callback\nand an optional cb_data parameter that contains any tool-specific data\n(i.e. mouse coordinates and hovered glyph indices for the HoverTool)."
+        ]
+      }
+    ],
+    "json": "{\n  \"args\": {},\n  \"code\": \"\",\n  \"id\": \"47c11088-9428-40df-801e-b6b09436894e\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "OpenURL",
+    "text": [
+      "Bases: bokeh.models.callbacks.Callback",
+      "Open a URL in a new tab or window (browser dependent)."
+    ],
+    "attrs": [
+      {
+        "name": "url",
+        "descs": [
+          "property type: String",
+          "The URL to direct the web browser to. This can be a template string,\nwhich will be formatted with data from the data source."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"a121f852-fba2-404b-af57-d0079e10544c\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": [],\n  \"url\": \"http://\"\n}\n\n\n  "
+  }
+]

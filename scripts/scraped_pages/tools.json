@@ -1,0 +1,693 @@
+[
+  {
+    "name": "Action",
+    "text": [
+      "Bases: bokeh.models.tools.Tool"
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"70b843df-7867-4eeb-b649-6e94f9641a90\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "BoxSelectTool",
+    "text": [
+      "Bases: bokeh.models.tools.Drag",
+      "toolbar icon: ",
+      "The box selection tool allows users to make selections on a\nPlot by indicating a rectangular region by dragging the\nmouse or a finger over the plot region. The end of the drag\nevent indicates the selection region is ready.",
+      "See Selected and Unselected Glyphs for information\non styling selected and unselected glyphs."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser on completion of drawing a selection box.\nThe cb_data parameter that is available to the Callback code will contain\none BoxSelectTool-specific field:"
+        ]
+      },
+      {
+        "name": "dimensions",
+        "descs": [
+          "property type: Enum ( Dimensions  )",
+          "Which dimensions the box selection is to be free in. By default,\nusers may freely draw selections boxes with any dimensions. If only\n“width” is supplied, the box will be constrained to span the entire\nvertical space of the plot, only the horizontal dimension can be\ncontrolled. If only “height” is supplied, the box will be constrained\nto span the entire horizontal space of the plot, and the vertical\ndimension can be controlled."
+        ]
+      },
+      {
+        "name": "names",
+        "descs": [
+          "property type: List ( String  )",
+          "A list of names to query for. If set, only renderers that\nhave a matching value for their name attribute will be used."
+        ]
+      },
+      {
+        "name": "overlay",
+        "descs": [
+          "property type: Instance ( BoxAnnotation  )",
+          "A shaded annotation drawn to indicate the selection region."
+        ]
+      },
+      {
+        "name": "renderers",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "An explicit list of renderers to hit test again. If unset,\ndefaults to all renderers on a plot."
+        ]
+      },
+      {
+        "name": "select_every_mousemove",
+        "descs": [
+          "property type: Bool",
+          "Whether a selection computation should happen on every mouse\nevent, or only once, when the selection region is completed. Default: False"
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"dimensions\": \"both\",\n  \"id\": \"781dfbb5-8333-4bde-9eec-a28c6f04a3ea\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"names\": [],\n  \"overlay\": {\n    \"id\": \"0b99bfd6-b6f1-411b-a47d-c6a08e24dfe0\",\n    \"type\": \"BoxAnnotation\"\n  },\n  \"plot\": null,\n  \"renderers\": [],\n  \"select_every_mousemove\": false,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "BoxZoomTool",
+    "text": [
+      "Bases: bokeh.models.tools.Drag",
+      "toolbar icon: ",
+      "The box zoom tool allows users to define a rectangular\nregion of a Plot to zoom to by dragging he mouse or a\nfinger over the plot region. The end of the drag\nevent indicates the selection region is ready."
+    ],
+    "attrs": [
+      {
+        "name": "dimensions",
+        "descs": [
+          "property type: Enum ( Dimensions  )",
+          "Which dimensions the zoom box is to be free in. By default,\nusers may freely draw zoom boxes with any dimensions. If only\n“width” is supplied, the box will be constrained to span the entire\nvertical space of the plot, only the horizontal dimension can be\ncontrolled. If only “height” is supplied, the box will be constrained\nto span the entire horizontal space of the plot, and the vertical\ndimension can be controlled."
+        ]
+      },
+      {
+        "name": "match_aspect",
+        "descs": [
+          "property type: Bool",
+          "Whether the box zoom region should be restricted to have the same\naspect ratio as the plot region."
+        ]
+      },
+      {
+        "name": "overlay",
+        "descs": [
+          "property type: Instance ( BoxAnnotation  )",
+          "A shaded annotation drawn to indicate the selection region."
+        ]
+      }
+    ],
+    "json": "{\n  \"dimensions\": \"both\",\n  \"id\": \"7cb466c8-5b1b-4dea-bcb5-65a557841a53\",\n  \"js_callbacks\": {},\n  \"match_aspect\": false,\n  \"name\": null,\n  \"overlay\": {\n    \"id\": \"423f53ab-83d5-4cff-af06-6735d7bfe414\",\n    \"type\": \"BoxAnnotation\"\n  },\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "CrosshairTool",
+    "text": [
+      "Bases: bokeh.models.tools.Inspection",
+      "toolbar icon: ",
+      "The crosshair tool is a passive inspector tool. It is generally on\nat all times, but can be configured in the inspector’s menu\nassociated with the toolbar icon shown above.",
+      "The crosshair tool draws a crosshair annotation over the plot,\ncentered on the current mouse position. The crosshair tool may be\nconfigured to draw across only one dimension by setting the\ndimension property to only width or height."
+    ],
+    "attrs": [
+      {
+        "name": "dimensions",
+        "descs": [
+          "property type: Enum ( Dimensions  )",
+          "Which dimensions the crosshair tool is to track. By default, both a\nvertical and horizontal line will be drawn. If only “width” is supplied,\nonly a horizontal line will be drawn. If only “height” is supplied,\nonly a vertical line will be drawn."
+        ]
+      },
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: Float",
+          "An alpha value to use to stroke paths with.",
+          "Acceptable values are floating point numbers between 0 (transparent)\nand 1 (opaque)."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: Color",
+          "A color to use to stroke paths with.",
+          "Acceptable values are:"
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: Float",
+          "Stroke width in units of pixels."
+        ]
+      }
+    ],
+    "json": "{\n  \"dimensions\": \"both\",\n  \"id\": \"f574fe31-be92-48ba-a8a3-aca19a981337\",\n  \"js_callbacks\": {},\n  \"line_alpha\": 1.0,\n  \"line_color\": \"black\",\n  \"line_width\": 1,\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "Drag",
+    "text": [
+      "Bases: bokeh.models.tools.Tool"
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"7a3ce531-d026-431c-8bfa-a706eff0a8f6\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "HelpTool",
+    "text": [
+      "Bases: bokeh.models.tools.Action",
+      "The help tool is a widget designed to replace the hardcoded ‘Help’ link.\nThe hover text can be customized through the help_tooltip attribute\nand the redirect site overridden as well."
+    ],
+    "attrs": [
+      {
+        "name": "help_tooltip",
+        "descs": [
+          "property type: String",
+          "Tooltip displayed when hovering over the help icon."
+        ]
+      },
+      {
+        "name": "redirect",
+        "descs": [
+          "property type: String",
+          "Site to be redirected through upon click."
+        ]
+      }
+    ],
+    "json": "{\n  \"help_tooltip\": \"Click the question mark to learn more about Bokeh plot tools.\",\n  \"id\": \"180e3e78-d244-4000-989f-42007700f6be\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"redirect\": \"http://bokeh.pydata.org/en/latest/docs/user_guide/tools.html\",\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "HoverTool",
+    "text": [
+      "Bases: bokeh.models.tools.Inspection",
+      "toolbar icon: ",
+      "The hover tool is a passive inspector tool. It is generally on at\nall times, but can be configured in the inspector’s menu associated\nwith the toolbar icon shown above.",
+      "By default, the hover tool displays informational tooltips whenever\nthe cursor is directly over a glyph. The data to show comes from the\nglyph’s data source, and what is to be displayed is configurable with\nthe tooltips attribute that maps display names to columns in the\ndata source, or to special known variables.",
+      "Here is an example of how to configure and use the hover tool:",
+      "You can also supply a Callback to the HoverTool, to build custom\ninteractions on hover. In this case you may want to turn the tooltips\noff by setting tooltips=None."
+    ],
+    "attrs": [
+      {
+        "name": "anchor",
+        "descs": [
+          "property type: Enum ( LegendLocation  )",
+          "If point policy is set to “snap_to_data”, anchor defines the attachment\npoint of a tooltip. The default is to attach to the center of a glyph."
+        ]
+      },
+      {
+        "name": "attachment",
+        "descs": [
+          "property type: Enum ( Enumeration(horizontal, vertical) )",
+          "Whether tooltip’s arrow should appear in the horizontal or vertical dimension."
+        ]
+      },
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the input’s value changes. The\ncb_data parameter that is available to the Callback code will contain two\nHoverTool specific fields:"
+        ]
+      },
+      {
+        "name": "line_policy",
+        "descs": [
+          "property type: Enum ( Enumeration(prev, next, nearest, interp, none) )",
+          "When showing tooltips for lines, whether the tooltip position should be\nthe “previous” or “next” points on the line, the nearest point to the\ncurrent mouse position, or interpolate along the line to the current\nmouse position."
+        ]
+      },
+      {
+        "name": "mode",
+        "descs": [
+          "property type: Enum ( Enumeration(mouse, hline, vline) )",
+          "Whether to consider hover pointer as a point (x/y values), or a\nspan on h or v directions."
+        ]
+      },
+      {
+        "name": "names",
+        "descs": [
+          "property type: List ( String  )",
+          "A list of names to query for. If set, only renderers that\nhave a matching value for their name attribute will be used."
+        ]
+      },
+      {
+        "name": "point_policy",
+        "descs": [
+          "property type: Enum ( Enumeration(snap_to_data, follow_mouse, none) )",
+          "Whether the tooltip position should snap to the “center” (or other anchor)\nposition of the associated glyph, or always follow the current mouse cursor\nposition."
+        ]
+      },
+      {
+        "name": "renderers",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "An explicit list of renderers to hit test again. If unset,\ndefaults to all renderers on a plot."
+        ]
+      },
+      {
+        "name": "show_arrow",
+        "descs": [
+          "property type: Bool",
+          "Whether tooltip’s arrow should be showed."
+        ]
+      },
+      {
+        "name": "tooltips",
+        "descs": [
+          "property type: Either ( String , List ( Tuple ( String , String  ) ) )",
+          "The (name, field) pairs describing what the hover tool should\ndisplay when there is a hit.",
+          "Field names starting with “@” are interpreted as columns on the\ndata source. For instance, “@temp” would look up values to display\nfrom the “temp” column of the data source.",
+          "Field names starting with “$” are special, known fields:",
+          "Additional format options safe and Numbro format codes\ncan be included in a post-fix brace block on field names.",
+          "Including {safe} after a field name will override automatic escaping\nof the tooltip data source. Any HTML tags in the data tags will be rendered\nas HTML in the resulting HoverTool output. See Custom Tooltip for a\nmore detailed example.",
+          "None is also a valid value for tooltips. This turns off the\nrendering of tooltips. This is mostly useful when supplying other\nactions on hover via the callback property."
+        ]
+      }
+    ],
+    "json": "{\n  \"anchor\": \"center\",\n  \"attachment\": \"horizontal\",\n  \"callback\": null,\n  \"id\": \"17742886-a30f-4a7b-8379-895c3458ce20\",\n  \"js_callbacks\": {},\n  \"line_policy\": \"prev\",\n  \"mode\": \"mouse\",\n  \"name\": null,\n  \"names\": [],\n  \"plot\": null,\n  \"point_policy\": \"snap_to_data\",\n  \"renderers\": [],\n  \"show_arrow\": true,\n  \"tags\": [],\n  \"tooltips\": [\n    [\n      \"index\",\n      \"$index\"\n    ],\n    [\n      \"data (x, y)\",\n      \"($x, $y)\"\n    ],\n    [\n      \"canvas (x, y)\",\n      \"($sx, $sy)\"\n    ]\n  ]\n}\n\n\n  "
+  },
+  {
+    "name": "Inspection",
+    "text": [
+      "Bases: bokeh.models.tools.Tool"
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"bc105528-99b5-414d-b960-24ee26e7a5c3\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "LassoSelectTool",
+    "text": [
+      "Bases: bokeh.models.tools.Drag",
+      "toolbar icon: ",
+      "The lasso selection tool allows users to make selections on a\nPlot by indicating a free-drawn “lasso” region by dragging the\nmouse or a finger over the plot region. The end of the drag\nevent indicates the selection region is ready.",
+      "See Selected and Unselected Glyphs for information\non styling selected and unselected glyphs."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser on every selection of a lasso area.\nThe cb_data parameter that is available to the Callback code will contain\none LassoSelectTool-specific field:"
+        ]
+      },
+      {
+        "name": "names",
+        "descs": [
+          "property type: List ( String  )",
+          "A list of names to query for. If set, only renderers that\nhave a matching value for their name attribute will be used."
+        ]
+      },
+      {
+        "name": "overlay",
+        "descs": [
+          "property type: Instance ( PolyAnnotation  )",
+          "A shaded annotation drawn to indicate the selection region."
+        ]
+      },
+      {
+        "name": "renderers",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "An explicit list of renderers to hit test again. If unset,\ndefaults to all renderers on a plot."
+        ]
+      },
+      {
+        "name": "select_every_mousemove",
+        "descs": [
+          "property type: Bool",
+          "Whether a selection computation should happen on every mouse\nevent, or only once, when the selection region is completed. Default: True"
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"id\": \"95954982-9b69-4aa5-9764-20e0c50aefda\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"names\": [],\n  \"overlay\": {\n    \"id\": \"6de1c8b7-39be-4d6a-ba75-82d9c23e0cb7\",\n    \"type\": \"PolyAnnotation\"\n  },\n  \"plot\": null,\n  \"renderers\": [],\n  \"select_every_mousemove\": true,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "PanTool",
+    "text": [
+      "Bases: bokeh.models.tools.Drag",
+      "toolbar icon: ",
+      "The pan tool allows the user to pan a Plot by left-dragging\na mouse, or on touch devices by dragging a finger or stylus, across\nthe plot region.",
+      "The pan tool also activates the border regions of a Plot for “single\naxis” panning. For instance, dragging in the vertical border or axis\nwill effect a pan in the vertical direction only, with the horizontal\ndimension kept fixed."
+    ],
+    "attrs": [
+      {
+        "name": "dimensions",
+        "descs": [
+          "property type: Enum ( Dimensions  )",
+          "Which dimensions the pan tool is constrained to act in. By default\nthe pan tool will pan in any dimension, but can be configured to only\npan horizontally across the width of the plot, or vertically across the\nheight of the plot."
+        ]
+      }
+    ],
+    "json": "{\n  \"dimensions\": \"both\",\n  \"id\": \"b0d06e6e-f5a5-43a6-b2ee-818896d64d8b\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "PolySelectTool",
+    "text": [
+      "Bases: bokeh.models.tools.Tap",
+      "toolbar icon: ",
+      "The polygon selection tool allows users to make selections on a\nPlot by indicating a polygonal region with mouse clicks. single\nclicks (or taps) add successive points to the definition of the\npolygon, and a double click (or tap) indicates the selection\nregion is ready.",
+      "See Selected and Unselected Glyphs for information\non styling selected and unselected glyphs."
+    ],
+    "attrs": [
+      {
+        "name": "names",
+        "descs": [
+          "property type: List ( String  )",
+          "A list of names to query for. If set, only renderers that\nhave a matching value for their name attribute will be used."
+        ]
+      },
+      {
+        "name": "overlay",
+        "descs": [
+          "property type: Instance ( PolyAnnotation  )",
+          "A shaded annotation drawn to indicate the selection region."
+        ]
+      },
+      {
+        "name": "renderers",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "An explicit list of renderers to hit test again. If unset,\ndefaults to all renderers on a plot."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"fdee2bff-745d-4241-a0f7-afd25e23211d\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"names\": [],\n  \"overlay\": {\n    \"id\": \"4c700d6c-597b-402b-815f-70c8f66b53b7\",\n    \"type\": \"PolyAnnotation\"\n  },\n  \"plot\": null,\n  \"renderers\": [],\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "RedoTool",
+    "text": [
+      "Bases: bokeh.models.tools.Action",
+      "toolbar icon: ",
+      "Redo tool reverses the last action performed by undo tool."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"3a3313ce-8de2-473e-bbab-4bc0e9de3a41\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ResetTool",
+    "text": [
+      "Bases: bokeh.models.tools.Action",
+      "toolbar icon: ",
+      "The reset tool is an action. When activated in the toolbar, the tool\nresets the data bounds of the plot to their values when the plot was\ninitially created.",
+      "Optionally, the reset tool also resets the plat canvas dimensions to\ntheir original size"
+    ],
+    "attrs": [
+      {
+        "name": "reset_size",
+        "descs": [
+          "property type: Bool",
+          "Whether activating the Reset tool should also reset the plot’s canvas\ndimensions to their original size."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"6bff22e5-f989-4e97-a164-6e9929245389\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"reset_size\": true,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ResizeTool",
+    "text": [
+      "Bases: bokeh.models.tools.Drag",
+      "toolbar icon: ",
+      "The resize tool allows the user to left-drag a mouse or drag a finger\nto resize the entire plot area on the screen."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"0355f104-2966-43dd-b1bb-5c6277507502\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "SaveTool",
+    "text": [
+      "Bases: bokeh.models.tools.Action",
+      "toolbar icon: ",
+      "The save tool is an action. When activated, the tool opens a download dialog\nwhich allows to save an image reproduction of the plot in PNG format. If\nautomatic download is not support by a web browser, the tool falls back to\nopening the generated image in a new tab or window. User then can manually\nsave it by right clicking on the image and choosing “Save As” (or similar)\nmenu item."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"e1dfb8fc-2c9e-43a7-afab-e833f9331c8a\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "Scroll",
+    "text": [
+      "Bases: bokeh.models.tools.Tool"
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"a4c225d9-4bf9-458c-9793-9a336e0050f8\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "Tap",
+    "text": [
+      "Bases: bokeh.models.tools.Tool"
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"00531a00-4965-4be7-8113-8fdf0f19b7a5\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "TapTool",
+    "text": [
+      "Bases: bokeh.models.tools.Tap",
+      "toolbar icon: ",
+      "The tap selection tool allows the user to select at single points by\nleft-clicking a mouse, or tapping with a finger.",
+      "See Selected and Unselected Glyphs for information\non styling selected and unselected glyphs."
+    ],
+    "attrs": [
+      {
+        "name": "behavior",
+        "descs": [
+          "property type: Enum ( Enumeration(select, inspect) )",
+          "This tool can be configured to either make selections or inspections\non associated data sources. The difference is that selection changes\npropagate across bokeh and other components (e.g. selection glyph)\nwill be notified. Inspecions don’t act like this, so it’s useful to\nconfigure callback when setting behavior=’inspect’."
+        ]
+      },
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A client-side action specification, like opening a URL, showing\na dialog box, etc. See Action for details."
+        ]
+      },
+      {
+        "name": "names",
+        "descs": [
+          "property type: List ( String  )",
+          "A list of names to query for. If set, only renderers that\nhave a matching value for their name attribute will be used."
+        ]
+      },
+      {
+        "name": "renderers",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "An explicit list of renderers to hit test again. If unset,\ndefaults to all renderers on a plot."
+        ]
+      }
+    ],
+    "json": "{\n  \"behavior\": \"select\",\n  \"callback\": null,\n  \"id\": \"63c2b873-de11-4866-8971-48415ede8fe9\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"names\": [],\n  \"plot\": null,\n  \"renderers\": [],\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "Tool",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "A base class for all interactive tool types. Tool is\nnot generally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "plot",
+        "descs": [
+          "property type: Instance ( Plot  )",
+          "The Plot that this tool will act on."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"58575087-4f02-4831-9242-fd55858d9bba\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ToolEvents",
+    "text": [
+      "Bases: bokeh.model.Model"
+    ],
+    "attrs": [
+      {
+        "name": "geometries",
+        "descs": [
+          "property type: List ( Dict ( String , Any  ) )"
+        ]
+      }
+    ],
+    "json": "{\n  \"geometries\": [],\n  \"id\": \"af56a4f7-a627-439c-9ea4-7789fe5ba204\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "Toolbar",
+    "text": [
+      "Bases: bokeh.models.tools.ToolbarBase",
+      "Hold tools to display for a single plot."
+    ],
+    "attrs": [
+      {
+        "name": "active_drag",
+        "descs": [
+          "property type: Either ( Auto , Instance ( Drag  ) )",
+          "Specify a drag tool to be active when the plot is displayed."
+        ]
+      },
+      {
+        "name": "active_scroll",
+        "descs": [
+          "property type: Either ( Auto , Instance ( Scroll  ) )",
+          "Specify a scroll/pinch tool to be active when the plot is displayed."
+        ]
+      },
+      {
+        "name": "active_tap",
+        "descs": [
+          "property type: Either ( Auto , Instance ( Tap  ) )",
+          "Specify a tap/click tool to be active when the plot is displayed."
+        ]
+      }
+    ],
+    "json": "{\n  \"active_drag\": \"auto\",\n  \"active_scroll\": \"auto\",\n  \"active_tap\": \"auto\",\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"8ae51a00-9213-4cf7-bdc6-64eec351da71\",\n  \"js_callbacks\": {},\n  \"logo\": \"normal\",\n  \"name\": null,\n  \"sizing_mode\": null,\n  \"tags\": [],\n  \"tools\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "ToolbarBase",
+    "text": [
+      "Bases: bokeh.models.layouts.LayoutDOM",
+      "A base class for different toolbars. ToolbarBase is\nnot generally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "logo",
+        "descs": [
+          "property type: Enum ( Enumeration(normal, grey) )",
+          "What version of the Bokeh logo to display on the toolbar. If\nset to None, no logo will be displayed."
+        ]
+      },
+      {
+        "name": "tools",
+        "descs": [
+          "property type: List ( Instance ( Tool  ) )",
+          "A list of tools to add to the plot."
+        ]
+      }
+    ],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"8db4767b-6eab-4d43-8959-b8c25770a296\",\n  \"js_callbacks\": {},\n  \"logo\": \"normal\",\n  \"name\": null,\n  \"sizing_mode\": null,\n  \"tags\": [],\n  \"tools\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "ToolbarBox",
+    "text": [
+      "Bases: bokeh.models.layouts.Box",
+      "A layoutable toolbar that can accept the tools of multiple plots, and\ncan merge the tools into a single button for convenience."
+    ],
+    "attrs": [
+      {
+        "name": "logo",
+        "descs": [
+          "property type: Enum ( Enumeration(normal, grey) )",
+          "What version of the Bokeh logo to display on the toolbar. If\nset to None, no logo will be displayed."
+        ]
+      },
+      {
+        "name": "merge_tools",
+        "descs": [
+          "property type: Bool",
+          "Merge all the tools together so there is one tool to control all the plots."
+        ]
+      },
+      {
+        "name": "toolbar_location",
+        "descs": [
+          "property type: Enum ( Location  )",
+          "Should the toolbar be presented as if it was stuck to the above, right, left, below\nedge of a plot. Default is right."
+        ]
+      },
+      {
+        "name": "tools",
+        "descs": [
+          "property type: List ( Instance ( Tool  ) )",
+          "A list of tools to add to the plot."
+        ]
+      }
+    ],
+    "json": "{\n  \"children\": [],\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"299ace3c-6d40-47df-8ccd-c70c994654e6\",\n  \"js_callbacks\": {},\n  \"logo\": \"normal\",\n  \"merge_tools\": true,\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"toolbar_location\": \"right\",\n  \"tools\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "UndoTool",
+    "text": [
+      "Bases: bokeh.models.tools.Action",
+      "toolbar icon: ",
+      "Undo tool allows to restore previous state of the plot."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"bc84b4e7-71a7-4ff7-b416-f284cd42a54a\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "WheelPanTool",
+    "text": [
+      "Bases: bokeh.models.tools.Scroll",
+      "toolbar icon: ",
+      "The wheel pan tool allows the user to pan the plot along the configured\ndimension using the scroll wheel."
+    ],
+    "attrs": [
+      {
+        "name": "dimension",
+        "descs": [
+          "property type: Enum ( Dimension  )",
+          "Which dimension the wheel pan tool is constrained to act in. By\ndefault the wheel pan tool will pan the plot along the x-axis."
+        ]
+      }
+    ],
+    "json": "{\n  \"dimension\": \"width\",\n  \"id\": \"992459c9-5571-4f35-a43f-573e77fe5e95\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "WheelZoomTool",
+    "text": [
+      "Bases: bokeh.models.tools.Scroll",
+      "toolbar icon: ",
+      "The wheel zoom tool will zoom the plot in and out, centered on the\ncurrent mouse location.",
+      "The wheel zoom tool also activates the border regions of a Plot for\n“single axis” zooming. For instance, zooming in the vertical border or\naxis will effect a zoom in the vertical direction only, with the\nhorizontal dimension kept fixed."
+    ],
+    "attrs": [
+      {
+        "name": "dimensions",
+        "descs": [
+          "property type: Enum ( Dimensions  )",
+          "Which dimensions the wheel zoom tool is constrained to act in. By\ndefault the wheel zoom tool will zoom in any dimension, but can be\nconfigured to only zoom horizontally across the width of the plot, or\nvertically across the height of the plot."
+        ]
+      }
+    ],
+    "json": "{\n  \"dimensions\": \"both\",\n  \"id\": \"2b86d08e-2cd1-450d-991e-c4f9ea544211\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ZoomInTool",
+    "text": [
+      "Bases: bokeh.models.tools.Action",
+      "toolbar icon: ",
+      "The zoom-in tool allows users to click a button to zoom in\nby a fixed amount."
+    ],
+    "attrs": [
+      {
+        "name": "dimensions",
+        "descs": [
+          "property type: Enum ( Dimensions  )",
+          "Which dimensions the zoom-in tool is constrained to act in. By\ndefault the zoom-in zoom tool will zoom in any dimension, but can be\nconfigured to only zoom horizontally across the width of the plot, or\nvertically across the height of the plot."
+        ]
+      },
+      {
+        "name": "factor",
+        "descs": [
+          "property type: Percent",
+          "Percentage to zoom for each click of the zoom-in tool."
+        ]
+      }
+    ],
+    "json": "{\n  \"dimensions\": \"both\",\n  \"factor\": 0.1,\n  \"id\": \"17030316-3eca-46f0-a836-087626440a25\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ZoomOutTool",
+    "text": [
+      "Bases: bokeh.models.tools.Action",
+      "toolbar icon: ",
+      "The zoom-out tool allows users to click a button to zoom out\nby a fixed amount."
+    ],
+    "attrs": [
+      {
+        "name": "dimensions",
+        "descs": [
+          "property type: Enum ( Dimensions  )",
+          "Which dimensions the zoom-out tool is constrained to act in. By\ndefault the zoom-out tool will zoom in any dimension, but can be\nconfigured to only zoom horizontally across the width of the plot, or\nvertically across the height of the plot."
+        ]
+      },
+      {
+        "name": "factor",
+        "descs": [
+          "property type: Percent",
+          "Percentage to zoom for each click of the zoom-in tool."
+        ]
+      }
+    ],
+    "json": "{\n  \"dimensions\": \"both\",\n  \"factor\": 0.1,\n  \"id\": \"2bacf620-0f2d-4b7d-abb5-70aa4ebe8ab6\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": []\n}\n\n\n  "
+  }
+]

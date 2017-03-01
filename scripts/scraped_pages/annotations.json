@@ -1,0 +1,1799 @@
+[
+  {
+    "name": "Annotation",
+    "text": [
+      "Bases: bokeh.models.renderers.Renderer",
+      "Base class for annotation models."
+    ],
+    "attrs": [
+      {
+        "name": "plot",
+        "descs": [
+          "property type: Instance ( Plot  )",
+          "The plot to which this annotation is attached."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"d57dcd6d-860e-46df-9f6c-7cc910e7cff2\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "Arrow",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Render an arrow as an annotation."
+    ],
+    "attrs": [
+      {
+        "name": "end",
+        "descs": [
+          "property type: Instance ( ArrowHead  )",
+          "Instance of ArrowHead."
+        ]
+      },
+      {
+        "name": "end_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the end_x and end_y attributes. Interpreted as “data\nspace” units by default."
+        ]
+      },
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the arrow body."
+        ]
+      },
+      {
+        "name": "line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the arrow body."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the arrow body."
+        ]
+      },
+      {
+        "name": "line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the arrow body."
+        ]
+      },
+      {
+        "name": "line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the arrow body."
+        ]
+      },
+      {
+        "name": "line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the arrow body."
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the arrow body."
+        ]
+      },
+      {
+        "name": "source",
+        "descs": [
+          "property type: Instance ( DataSource  )",
+          "Local data source to use when rendering annotations on the plot."
+        ]
+      },
+      {
+        "name": "start",
+        "descs": [
+          "property type: Instance ( ArrowHead  )",
+          "Instance of ArrowHead."
+        ]
+      },
+      {
+        "name": "start_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the start_x and start_y attributes. Interpreted as “data\nspace” units by default."
+        ]
+      },
+      {
+        "name": "x_end",
+        "descs": [
+          "property type: NumberSpec",
+          "The x-coordinates to locate the end of the arrows."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen locations when\nrendering annotations on the plot. If unset, use the default x-range."
+        ]
+      },
+      {
+        "name": "x_start",
+        "descs": [
+          "property type: NumberSpec",
+          "The x-coordinates to locate the start of the arrows."
+        ]
+      },
+      {
+        "name": "y_end",
+        "descs": [
+          "property type: NumberSpec",
+          "The y-coordinates to locate the end of the arrows."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen locations when\nrendering annotations on the plot. If unset, use the default y-range."
+        ]
+      },
+      {
+        "name": "y_start",
+        "descs": [
+          "property type: NumberSpec",
+          "The y-coordinates to locate the start of the arrows."
+        ]
+      }
+    ],
+    "json": "{\n  \"end\": {\n    \"id\": \"f6aa99ee-ff85-40ca-927f-970a298cbb65\",\n    \"type\": \"OpenHead\"\n  },\n  \"end_units\": \"data\",\n  \"id\": \"6ab41868-2a68-40a6-aeb0-c49579745840\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"line_alpha\": {\n    \"value\": 1.0\n  },\n  \"line_cap\": \"butt\",\n  \"line_color\": {\n    \"value\": \"black\"\n  },\n  \"line_dash\": [],\n  \"line_dash_offset\": 0,\n  \"line_join\": \"miter\",\n  \"line_width\": {\n    \"value\": 1\n  },\n  \"name\": null,\n  \"plot\": null,\n  \"source\": null,\n  \"start\": null,\n  \"start_units\": \"data\",\n  \"tags\": [],\n  \"visible\": true,\n  \"x_end\": null,\n  \"x_range_name\": \"default\",\n  \"x_start\": null,\n  \"y_end\": null,\n  \"y_range_name\": \"default\",\n  \"y_start\": null\n}\n\n\n  "
+  },
+  {
+    "name": "BoxAnnotation",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Render a shaded rectangular region as an annotation."
+    ],
+    "attrs": [
+      {
+        "name": "bottom",
+        "descs": [
+          "property type: Either ( Auto , NumberSpec  )",
+          "The y-coordinates of the bottom edge of the box annotation."
+        ]
+      },
+      {
+        "name": "bottom_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the bottom attribute. Interpreted as “data space” units\nby default."
+        ]
+      },
+      {
+        "name": "fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha values for the box."
+        ]
+      },
+      {
+        "name": "fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color values for the box."
+        ]
+      },
+      {
+        "name": "left",
+        "descs": [
+          "property type: Either ( Auto , NumberSpec  )",
+          "The x-coordinates of the left edge of the box annotation."
+        ]
+      },
+      {
+        "name": "left_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the left attribute. Interpreted as “data space” units\nby default."
+        ]
+      },
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the box."
+        ]
+      },
+      {
+        "name": "line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the box."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the box."
+        ]
+      },
+      {
+        "name": "line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the box."
+        ]
+      },
+      {
+        "name": "line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the box."
+        ]
+      },
+      {
+        "name": "line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the box."
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the box."
+        ]
+      },
+      {
+        "name": "render_mode",
+        "descs": [
+          "property type: Enum ( RenderMode  )",
+          "Specifies whether the box is rendered as a canvas element or as an\ncss element overlaid on the canvas. The default mode is “canvas”."
+        ]
+      },
+      {
+        "name": "right",
+        "descs": [
+          "property type: Either ( Auto , NumberSpec  )",
+          "The x-coordinates of the right edge of the box annotation."
+        ]
+      },
+      {
+        "name": "right_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the right attribute. Interpreted as “data space” units\nby default."
+        ]
+      },
+      {
+        "name": "top",
+        "descs": [
+          "property type: Either ( Auto , NumberSpec  )",
+          "The y-coordinates of the top edge of the box annotation."
+        ]
+      },
+      {
+        "name": "top_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the top attribute. Interpreted as “data space” units\nby default."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen locations when\nrendering box annotations on the plot. If unset, use the default x-range."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen locations when\nrendering box annotations on the plot. If unset, use the default y-range."
+        ]
+      }
+    ],
+    "json": "{\n  \"bottom\": null,\n  \"bottom_units\": \"data\",\n  \"fill_alpha\": {\n    \"value\": 0.4\n  },\n  \"fill_color\": {\n    \"value\": \"#fff9ba\"\n  },\n  \"id\": \"954b87f7-600d-44af-bc9c-314156f2bd54\",\n  \"js_callbacks\": {},\n  \"left\": null,\n  \"left_units\": \"data\",\n  \"level\": \"annotation\",\n  \"line_alpha\": {\n    \"value\": 0.3\n  },\n  \"line_cap\": \"butt\",\n  \"line_color\": {\n    \"value\": \"#cccccc\"\n  },\n  \"line_dash\": [],\n  \"line_dash_offset\": 0,\n  \"line_join\": \"miter\",\n  \"line_width\": {\n    \"value\": 1\n  },\n  \"name\": null,\n  \"plot\": null,\n  \"render_mode\": \"canvas\",\n  \"right\": null,\n  \"right_units\": \"data\",\n  \"tags\": [],\n  \"top\": null,\n  \"top_units\": \"data\",\n  \"visible\": true,\n  \"x_range_name\": \"default\",\n  \"y_range_name\": \"default\"\n}\n\n\n  "
+  },
+  {
+    "name": "ColorBar",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Render a color bar based on a color mapper for a plot."
+    ],
+    "attrs": [
+      {
+        "name": "background_fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha for the color bar background style."
+        ]
+      },
+      {
+        "name": "background_fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color for the color bar background style."
+        ]
+      },
+      {
+        "name": "bar_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha for the color scale bar outline."
+        ]
+      },
+      {
+        "name": "bar_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap for the color scale bar outline."
+        ]
+      },
+      {
+        "name": "bar_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color for the color scale bar outline."
+        ]
+      },
+      {
+        "name": "bar_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash for the color scale bar outline."
+        ]
+      },
+      {
+        "name": "bar_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset for the color scale bar outline."
+        ]
+      },
+      {
+        "name": "bar_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join for the color scale bar outline."
+        ]
+      },
+      {
+        "name": "bar_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width for the color scale bar outline."
+        ]
+      },
+      {
+        "name": "border_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha for the color bar border outline."
+        ]
+      },
+      {
+        "name": "border_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap for the color bar border outline."
+        ]
+      },
+      {
+        "name": "border_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color for the color bar border outline."
+        ]
+      },
+      {
+        "name": "border_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash for the color bar border outline."
+        ]
+      },
+      {
+        "name": "border_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset for the color bar border outline."
+        ]
+      },
+      {
+        "name": "border_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join for the color bar border outline."
+        ]
+      },
+      {
+        "name": "border_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width for the color bar border outline."
+        ]
+      },
+      {
+        "name": "color_mapper",
+        "descs": [
+          "property type: Instance ( ContinuousColorMapper  )",
+          "A continuous color mapper containing a color palette to render."
+        ]
+      },
+      {
+        "name": "formatter",
+        "descs": [
+          "property type: Instance ( TickFormatter  )",
+          "A TickFormatter to use for formatting the visual appearance of ticks."
+        ]
+      },
+      {
+        "name": "height",
+        "descs": [
+          "property type: Either ( Auto , Int  )",
+          "The height (in pixels) that the color scale should occupy."
+        ]
+      },
+      {
+        "name": "label_standoff",
+        "descs": [
+          "property type: Int",
+          "The distance (in pixels) to separate the tick labels from the color bar."
+        ]
+      },
+      {
+        "name": "location",
+        "descs": [
+          "property type: Either ( Enum ( LegendLocation  ), Tuple ( Float , Float  ) )",
+          "The location where the color bar should draw itself. It’s either one of\nbokeh.core.enums.LegendLocation‘s enumerated values, or a (x, y)\ntuple indicating an absolute location absolute location in screen\ncoordinates (pixels from the bottom-left corner)."
+        ]
+      },
+      {
+        "name": "major_label_text_align",
+        "descs": [
+          "property type: Enum ( TextAlign  )",
+          "The text align of the major tick labels."
+        ]
+      },
+      {
+        "name": "major_label_text_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The text alpha of the major tick labels."
+        ]
+      },
+      {
+        "name": "major_label_text_baseline",
+        "descs": [
+          "property type: Enum ( TextBaseline  )",
+          "The text baseline of the major tick labels."
+        ]
+      },
+      {
+        "name": "major_label_text_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The text color of the major tick labels."
+        ]
+      },
+      {
+        "name": "major_label_text_font",
+        "descs": [
+          "property type: String",
+          "The text font of the major tick labels."
+        ]
+      },
+      {
+        "name": "major_label_text_font_size",
+        "descs": [
+          "property type: FontSizeSpec",
+          "The text font size of the major tick labels."
+        ]
+      },
+      {
+        "name": "major_label_text_font_style",
+        "descs": [
+          "property type: Enum ( FontStyle  )",
+          "The text font style of the major tick labels."
+        ]
+      },
+      {
+        "name": "major_tick_in",
+        "descs": [
+          "property type: Int",
+          "The distance (in pixels) that major ticks should extend into the\nmain plot area."
+        ]
+      },
+      {
+        "name": "major_tick_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha of the major ticks."
+        ]
+      },
+      {
+        "name": "major_tick_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap of the major ticks."
+        ]
+      },
+      {
+        "name": "major_tick_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color of the major ticks."
+        ]
+      },
+      {
+        "name": "major_tick_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash of the major ticks."
+        ]
+      },
+      {
+        "name": "major_tick_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset of the major ticks."
+        ]
+      },
+      {
+        "name": "major_tick_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join of the major ticks."
+        ]
+      },
+      {
+        "name": "major_tick_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width of the major ticks."
+        ]
+      },
+      {
+        "name": "major_tick_out",
+        "descs": [
+          "property type: Int",
+          "The distance (in pixels) that major ticks should extend out of the\nmain plot area."
+        ]
+      },
+      {
+        "name": "margin",
+        "descs": [
+          "property type: Int",
+          "Amount of margin (in pixels) around the outside of the color bar."
+        ]
+      },
+      {
+        "name": "minor_tick_in",
+        "descs": [
+          "property type: Int",
+          "The distance (in pixels) that minor ticks should extend into the\nmain plot area."
+        ]
+      },
+      {
+        "name": "minor_tick_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha of the minor ticks."
+        ]
+      },
+      {
+        "name": "minor_tick_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap of the minor ticks."
+        ]
+      },
+      {
+        "name": "minor_tick_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color of the minor ticks."
+        ]
+      },
+      {
+        "name": "minor_tick_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash of the minor ticks."
+        ]
+      },
+      {
+        "name": "minor_tick_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset of the minor ticks."
+        ]
+      },
+      {
+        "name": "minor_tick_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join of the minor ticks."
+        ]
+      },
+      {
+        "name": "minor_tick_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width of the minor ticks."
+        ]
+      },
+      {
+        "name": "minor_tick_out",
+        "descs": [
+          "property type: Int",
+          "The distance (in pixels) that major ticks should extend out of the\nmain plot area."
+        ]
+      },
+      {
+        "name": "orientation",
+        "descs": [
+          "property type: Enum ( Orientation  )",
+          "Whether the color bar should be oriented vertically or horizontally."
+        ]
+      },
+      {
+        "name": "padding",
+        "descs": [
+          "property type: Int",
+          "Amount of padding (in pixels) between the color scale and color bar border."
+        ]
+      },
+      {
+        "name": "scale_alpha",
+        "descs": [
+          "property type: Float",
+          "The alpha with which to render the color scale."
+        ]
+      },
+      {
+        "name": "ticker",
+        "descs": [
+          "property type: Instance ( Ticker  )",
+          "A Ticker to use for computing locations of axis components."
+        ]
+      },
+      {
+        "name": "title",
+        "descs": [
+          "property type: String",
+          "The title text to render."
+        ]
+      },
+      {
+        "name": "title_standoff",
+        "descs": [
+          "property type: Int",
+          "The distance (in pixels) to separate the title from the color bar."
+        ]
+      },
+      {
+        "name": "title_text_align",
+        "descs": [
+          "property type: Enum ( TextAlign  )",
+          "The text align values for the title text."
+        ]
+      },
+      {
+        "name": "title_text_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The text alpha values for the title text."
+        ]
+      },
+      {
+        "name": "title_text_baseline",
+        "descs": [
+          "property type: Enum ( TextBaseline  )",
+          "The text baseline values for the title text."
+        ]
+      },
+      {
+        "name": "title_text_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The text color values for the title text."
+        ]
+      },
+      {
+        "name": "title_text_font",
+        "descs": [
+          "property type: String",
+          "The text font values for the title text."
+        ]
+      },
+      {
+        "name": "title_text_font_size",
+        "descs": [
+          "property type: FontSizeSpec",
+          "The text font size values for the title text."
+        ]
+      },
+      {
+        "name": "title_text_font_style",
+        "descs": [
+          "property type: Enum ( FontStyle  )",
+          "The text font style values for the title text."
+        ]
+      },
+      {
+        "name": "width",
+        "descs": [
+          "property type: Either ( Auto , Int  )",
+          "The width (in pixels) that the color scale should occupy."
+        ]
+      }
+    ],
+    "json": "{\n  \"background_fill_alpha\": {\n    \"value\": 0.95\n  },\n  \"background_fill_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"bar_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"bar_line_cap\": \"butt\",\n  \"bar_line_color\": {\n    \"value\": null\n  },\n  \"bar_line_dash\": [],\n  \"bar_line_dash_offset\": 0,\n  \"bar_line_join\": \"miter\",\n  \"bar_line_width\": {\n    \"value\": 1\n  },\n  \"border_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"border_line_cap\": \"butt\",\n  \"border_line_color\": {\n    \"value\": null\n  },\n  \"border_line_dash\": [],\n  \"border_line_dash_offset\": 0,\n  \"border_line_join\": \"miter\",\n  \"border_line_width\": {\n    \"value\": 1\n  },\n  \"color_mapper\": null,\n  \"formatter\": {\n    \"id\": \"144d495a-64cd-4d07-9104-fa42d198a706\",\n    \"type\": \"BasicTickFormatter\"\n  },\n  \"height\": \"auto\",\n  \"id\": \"36c492c4-15b4-4651-8919-31e6f4d25aad\",\n  \"js_callbacks\": {},\n  \"label_standoff\": 5,\n  \"level\": \"annotation\",\n  \"location\": \"top_right\",\n  \"major_label_text_align\": \"center\",\n  \"major_label_text_alpha\": {\n    \"value\": 1.0\n  },\n  \"major_label_text_baseline\": \"middle\",\n  \"major_label_text_color\": {\n    \"value\": \"#444444\"\n  },\n  \"major_label_text_font\": \"helvetica\",\n  \"major_label_text_font_size\": {\n    \"value\": \"8pt\"\n  },\n  \"major_label_text_font_style\": \"normal\",\n  \"major_tick_in\": 5,\n  \"major_tick_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"major_tick_line_cap\": \"butt\",\n  \"major_tick_line_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"major_tick_line_dash\": [],\n  \"major_tick_line_dash_offset\": 0,\n  \"major_tick_line_join\": \"miter\",\n  \"major_tick_line_width\": {\n    \"value\": 1\n  },\n  \"major_tick_out\": 0,\n  \"margin\": 30,\n  \"minor_tick_in\": 0,\n  \"minor_tick_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"minor_tick_line_cap\": \"butt\",\n  \"minor_tick_line_color\": {\n    \"value\": null\n  },\n  \"minor_tick_line_dash\": [],\n  \"minor_tick_line_dash_offset\": 0,\n  \"minor_tick_line_join\": \"miter\",\n  \"minor_tick_line_width\": {\n    \"value\": 1\n  },\n  \"minor_tick_out\": 0,\n  \"name\": null,\n  \"orientation\": \"vertical\",\n  \"padding\": 10,\n  \"plot\": null,\n  \"scale_alpha\": 1.0,\n  \"tags\": [],\n  \"ticker\": {\n    \"id\": \"016ce443-cd76-4885-89fe-b332cb52e532\",\n    \"type\": \"BasicTicker\"\n  },\n  \"title\": null,\n  \"title_standoff\": 2,\n  \"title_text_align\": \"left\",\n  \"title_text_alpha\": {\n    \"value\": 1.0\n  },\n  \"title_text_baseline\": \"bottom\",\n  \"title_text_color\": {\n    \"value\": \"#444444\"\n  },\n  \"title_text_font\": \"helvetica\",\n  \"title_text_font_size\": {\n    \"value\": \"10pt\"\n  },\n  \"title_text_font_style\": \"italic\",\n  \"visible\": true,\n  \"width\": \"auto\"\n}\n\n\n  "
+  },
+  {
+    "name": "Label",
+    "text": [
+      "Bases: bokeh.models.annotations.TextAnnotation",
+      "Render a single text box as an annotation."
+    ],
+    "attrs": [
+      {
+        "name": "angle",
+        "descs": [
+          "property type: Angle",
+          "The angle to rotate the text, as measured from the horizontal."
+        ]
+      },
+      {
+        "name": "angle_units",
+        "descs": [
+          "property type: Enum ( AngleUnits  )",
+          "Acceptable values for units are \"rad\" and \"deg\""
+        ]
+      },
+      {
+        "name": "background_fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha values for the text bounding box."
+        ]
+      },
+      {
+        "name": "background_fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the text bounding box."
+        ]
+      },
+      {
+        "name": "render_mode",
+        "descs": [
+          "property type: Enum ( RenderMode  )",
+          "Specifies whether the text is rendered as a canvas element or as an\ncss element overlaid on the canvas. The default mode is “canvas”."
+        ]
+      },
+      {
+        "name": "text",
+        "descs": [
+          "property type: String",
+          "The text value to render."
+        ]
+      },
+      {
+        "name": "text_align",
+        "descs": [
+          "property type: Enum ( TextAlign  )",
+          "The text align values for the text."
+        ]
+      },
+      {
+        "name": "text_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The text alpha values for the text."
+        ]
+      },
+      {
+        "name": "text_baseline",
+        "descs": [
+          "property type: Enum ( TextBaseline  )",
+          "The text baseline values for the text."
+        ]
+      },
+      {
+        "name": "text_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The text color values for the text."
+        ]
+      },
+      {
+        "name": "text_font",
+        "descs": [
+          "property type: String",
+          "The text font values for the text."
+        ]
+      },
+      {
+        "name": "text_font_size",
+        "descs": [
+          "property type: FontSizeSpec",
+          "The text font size values for the text."
+        ]
+      },
+      {
+        "name": "text_font_style",
+        "descs": [
+          "property type: Enum ( FontStyle  )",
+          "The text font style values for the text."
+        ]
+      },
+      {
+        "name": "x",
+        "descs": [
+          "property type: Float",
+          "The x-coordinate in screen coordinates to locate the text anchors."
+        ]
+      },
+      {
+        "name": "x_offset",
+        "descs": [
+          "property type: Float",
+          "Offset value to apply to the x-coordinate.",
+          "This is useful, for instance, if it is desired to “float” text a fixed\ndistance in screen units from a given data position."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen location when\nrendering an annotation on the plot. If unset, use the default x-range."
+        ]
+      },
+      {
+        "name": "x_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the x attribute. Interpreted as “data space” units\nby default."
+        ]
+      },
+      {
+        "name": "y",
+        "descs": [
+          "property type: Float",
+          "The y-coordinate in screen coordinates to locate the text anchors."
+        ]
+      },
+      {
+        "name": "y_offset",
+        "descs": [
+          "property type: Float",
+          "Offset value to apply to the y-coordinate.",
+          "This is useful, for instance, if it is desired to “float” text a fixed\ndistance in screen units from a given data position."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen location when\nrendering an annotation on the plot. If unset, use the default y-range."
+        ]
+      },
+      {
+        "name": "y_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the y attribute. Interpreted as “data space” units\nby default."
+        ]
+      }
+    ],
+    "json": "{\n  \"angle\": 0,\n  \"angle_units\": \"rad\",\n  \"background_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"background_fill_color\": {\n    \"value\": null\n  },\n  \"border_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"border_line_cap\": \"butt\",\n  \"border_line_color\": {\n    \"value\": null\n  },\n  \"border_line_dash\": [],\n  \"border_line_dash_offset\": 0,\n  \"border_line_join\": \"miter\",\n  \"border_line_width\": {\n    \"value\": 1\n  },\n  \"id\": \"258d0e24-3157-4279-bb32-f36b95c0e37a\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"name\": null,\n  \"plot\": null,\n  \"render_mode\": \"canvas\",\n  \"tags\": [],\n  \"text\": null,\n  \"text_align\": \"left\",\n  \"text_alpha\": {\n    \"value\": 1.0\n  },\n  \"text_baseline\": \"bottom\",\n  \"text_color\": {\n    \"value\": \"#444444\"\n  },\n  \"text_font\": \"helvetica\",\n  \"text_font_size\": {\n    \"value\": \"12pt\"\n  },\n  \"text_font_style\": \"normal\",\n  \"visible\": true,\n  \"x\": null,\n  \"x_offset\": 0,\n  \"x_range_name\": \"default\",\n  \"x_units\": \"data\",\n  \"y\": null,\n  \"y_offset\": 0,\n  \"y_range_name\": \"default\",\n  \"y_units\": \"data\"\n}\n\n\n  "
+  },
+  {
+    "name": "LabelSet",
+    "text": [
+      "Bases: bokeh.models.annotations.TextAnnotation",
+      "Render a group of text boxes as annotations."
+    ],
+    "attrs": [
+      {
+        "name": "angle",
+        "descs": [
+          "property type: AngleSpec",
+          "The angles to rotate the text, as measured from the horizontal."
+        ]
+      },
+      {
+        "name": "angle_units",
+        "descs": [
+          "property type: Enum ( AngleUnits  )"
+        ]
+      },
+      {
+        "name": "background_fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha values for the text bounding box."
+        ]
+      },
+      {
+        "name": "background_fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the text bounding box."
+        ]
+      },
+      {
+        "name": "render_mode",
+        "descs": [
+          "property type: Enum ( RenderMode  )",
+          "Specifies whether the text is rendered as a canvas element or as an\ncss element overlaid on the canvas. The default mode is “canvas”."
+        ]
+      },
+      {
+        "name": "source",
+        "descs": [
+          "property type: Instance ( DataSource  )",
+          "Local data source to use when rendering annotations on the plot."
+        ]
+      },
+      {
+        "name": "text",
+        "descs": [
+          "property type: StringSpec",
+          "The text values to render."
+        ]
+      },
+      {
+        "name": "text_align",
+        "descs": [
+          "property type: Enum ( TextAlign  )",
+          "The text align values for the text."
+        ]
+      },
+      {
+        "name": "text_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The text alpha values for the text."
+        ]
+      },
+      {
+        "name": "text_baseline",
+        "descs": [
+          "property type: Enum ( TextBaseline  )",
+          "The text baseline values for the text."
+        ]
+      },
+      {
+        "name": "text_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The text color values for the text."
+        ]
+      },
+      {
+        "name": "text_font",
+        "descs": [
+          "property type: String",
+          "The text font values for the text."
+        ]
+      },
+      {
+        "name": "text_font_size",
+        "descs": [
+          "property type: FontSizeSpec",
+          "The text font size values for the text."
+        ]
+      },
+      {
+        "name": "text_font_style",
+        "descs": [
+          "property type: Enum ( FontStyle  )",
+          "The text font style values for the text."
+        ]
+      },
+      {
+        "name": "x",
+        "descs": [
+          "property type: NumberSpec",
+          "The x-coordinates to locate the text anchors."
+        ]
+      },
+      {
+        "name": "x_offset",
+        "descs": [
+          "property type: NumberSpec",
+          "Offset values to apply to the x-coordinates.",
+          "This is useful, for instance, if it is desired to “float” text a fixed\ndistance in screen units from a given data position."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen locations when\nrendering annotations on the plot. If unset, use the default x-range."
+        ]
+      },
+      {
+        "name": "x_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the xs attribute. Interpreted as “data space” units\nby default."
+        ]
+      },
+      {
+        "name": "y",
+        "descs": [
+          "property type: NumberSpec",
+          "The y-coordinates to locate the text anchors."
+        ]
+      },
+      {
+        "name": "y_offset",
+        "descs": [
+          "property type: NumberSpec",
+          "Offset values to apply to the y-coordinates.",
+          "This is useful, for instance, if it is desired to “float” text a fixed\ndistance in screen units from a given data position."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen locations when\nrendering annotations on the plot. If unset, use the default y-range."
+        ]
+      },
+      {
+        "name": "y_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the ys attribute. Interpreted as “data space” units\nby default."
+        ]
+      }
+    ],
+    "json": "{\n  \"angle\": {\n    \"units\": \"rad\",\n    \"value\": 0\n  },\n  \"background_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"background_fill_color\": {\n    \"value\": null\n  },\n  \"border_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"border_line_cap\": \"butt\",\n  \"border_line_color\": {\n    \"value\": null\n  },\n  \"border_line_dash\": [],\n  \"border_line_dash_offset\": 0,\n  \"border_line_join\": \"miter\",\n  \"border_line_width\": {\n    \"value\": 1\n  },\n  \"id\": \"d4ae48e4-bb1f-47d3-abca-5a60436402ec\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"name\": null,\n  \"plot\": null,\n  \"render_mode\": \"canvas\",\n  \"source\": {\n    \"id\": \"bc6bf2a9-6a64-4569-927b-3b64fc9e6705\",\n    \"type\": \"ColumnDataSource\"\n  },\n  \"tags\": [],\n  \"text\": {\n    \"field\": \"text\"\n  },\n  \"text_align\": \"left\",\n  \"text_alpha\": {\n    \"value\": 1.0\n  },\n  \"text_baseline\": \"bottom\",\n  \"text_color\": {\n    \"value\": \"#444444\"\n  },\n  \"text_font\": \"helvetica\",\n  \"text_font_size\": {\n    \"value\": \"12pt\"\n  },\n  \"text_font_style\": \"normal\",\n  \"visible\": true,\n  \"x\": null,\n  \"x_offset\": {\n    \"value\": 0\n  },\n  \"x_range_name\": \"default\",\n  \"x_units\": \"data\",\n  \"y\": null,\n  \"y_offset\": {\n    \"value\": 0\n  },\n  \"y_range_name\": \"default\",\n  \"y_units\": \"data\"\n}\n\n\n  "
+  },
+  {
+    "name": "Legend",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Render informational legends for a plot."
+    ],
+    "attrs": [
+      {
+        "name": "background_fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha for the legend background style."
+        ]
+      },
+      {
+        "name": "background_fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color for the legend background style."
+        ]
+      },
+      {
+        "name": "border_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha for the legend border outline."
+        ]
+      },
+      {
+        "name": "border_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap for the legend border outline."
+        ]
+      },
+      {
+        "name": "border_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color for the legend border outline."
+        ]
+      },
+      {
+        "name": "border_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash for the legend border outline."
+        ]
+      },
+      {
+        "name": "border_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset for the legend border outline."
+        ]
+      },
+      {
+        "name": "border_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join for the legend border outline."
+        ]
+      },
+      {
+        "name": "border_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width for the legend border outline."
+        ]
+      },
+      {
+        "name": "glyph_height",
+        "descs": [
+          "property type: Int",
+          "The height (in pixels) that the rendered legend glyph should occupy."
+        ]
+      },
+      {
+        "name": "glyph_width",
+        "descs": [
+          "property type: Int",
+          "The width (in pixels) that the rendered legend glyph should occupy."
+        ]
+      },
+      {
+        "name": "items",
+        "descs": [
+          "property type: List ( Instance ( LegendItem  ) )",
+          "A list of legend items to be rendered in the legend.",
+          "This can be specified explicitly, for instance:",
+          "But can also be given more compactly as a list of tuples:",
+          "where each tuple is of the form: (label, renderers)."
+        ]
+      },
+      {
+        "name": "label_height",
+        "descs": [
+          "property type: Int",
+          "The minimum height (in pixels) of the area that legend labels should occupy."
+        ]
+      },
+      {
+        "name": "label_standoff",
+        "descs": [
+          "property type: Int",
+          "The distance (in pixels) to separate the label from its associated glyph."
+        ]
+      },
+      {
+        "name": "label_text_align",
+        "descs": [
+          "property type: Enum ( TextAlign  )",
+          "The text align for the legend labels."
+        ]
+      },
+      {
+        "name": "label_text_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The text alpha for the legend labels."
+        ]
+      },
+      {
+        "name": "label_text_baseline",
+        "descs": [
+          "property type: Enum ( TextBaseline  )",
+          "The text baseline for the legend labels."
+        ]
+      },
+      {
+        "name": "label_text_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The text color for the legend labels."
+        ]
+      },
+      {
+        "name": "label_text_font",
+        "descs": [
+          "property type: String",
+          "The text font for the legend labels."
+        ]
+      },
+      {
+        "name": "label_text_font_size",
+        "descs": [
+          "property type: FontSizeSpec",
+          "The text font size for the legend labels."
+        ]
+      },
+      {
+        "name": "label_text_font_style",
+        "descs": [
+          "property type: Enum ( FontStyle  )",
+          "The text font style for the legend labels."
+        ]
+      },
+      {
+        "name": "label_width",
+        "descs": [
+          "property type: Int",
+          "The minimum width (in pixels) of the area that legend labels should occupy."
+        ]
+      },
+      {
+        "name": "location",
+        "descs": [
+          "property type: Either ( Enum ( LegendLocation  ), Tuple ( Float , Float  ) )",
+          "The location where the legend should draw itself. It’s either one of\nbokeh.core.enums.LegendLocation‘s enumerated values, or a (x, y)\ntuple indicating an absolute location absolute location in screen\ncoordinates (pixels from the bottom-left corner)."
+        ]
+      },
+      {
+        "name": "margin",
+        "descs": [
+          "property type: Int",
+          "Amount of margin around the legend."
+        ]
+      },
+      {
+        "name": "orientation",
+        "descs": [
+          "property type: Enum ( Orientation  )",
+          "Whether the legend entries should be placed vertically or horizontally\nwhen they are layed out."
+        ]
+      },
+      {
+        "name": "padding",
+        "descs": [
+          "property type: Int",
+          "Amount of padding around the contents of the legend."
+        ]
+      },
+      {
+        "name": "spacing",
+        "descs": [
+          "property type: Int",
+          "Amount of spacing between legend entries."
+        ]
+      },
+      {
+        "name": "legend_margin",
+        "descs": []
+      },
+      {
+        "name": "legend_padding",
+        "descs": []
+      },
+      {
+        "name": "legend_spacing",
+        "descs": []
+      },
+      {
+        "name": "legends",
+        "descs": []
+      }
+    ],
+    "json": "{\n  \"background_fill_alpha\": {\n    \"value\": 0.95\n  },\n  \"background_fill_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"border_line_alpha\": {\n    \"value\": 0.5\n  },\n  \"border_line_cap\": \"butt\",\n  \"border_line_color\": {\n    \"value\": \"#e5e5e5\"\n  },\n  \"border_line_dash\": [],\n  \"border_line_dash_offset\": 0,\n  \"border_line_join\": \"miter\",\n  \"border_line_width\": {\n    \"value\": 1\n  },\n  \"glyph_height\": 20,\n  \"glyph_width\": 20,\n  \"id\": \"e6a4c7a8-93bb-4b34-9a76-023b069b2899\",\n  \"items\": [],\n  \"js_callbacks\": {},\n  \"label_height\": 20,\n  \"label_standoff\": 5,\n  \"label_text_align\": \"left\",\n  \"label_text_alpha\": {\n    \"value\": 1.0\n  },\n  \"label_text_baseline\": \"middle\",\n  \"label_text_color\": {\n    \"value\": \"#444444\"\n  },\n  \"label_text_font\": \"helvetica\",\n  \"label_text_font_size\": {\n    \"value\": \"10pt\"\n  },\n  \"label_text_font_style\": \"normal\",\n  \"label_width\": 20,\n  \"level\": \"annotation\",\n  \"location\": \"top_right\",\n  \"margin\": 10,\n  \"name\": null,\n  \"orientation\": \"vertical\",\n  \"padding\": 10,\n  \"plot\": null,\n  \"spacing\": 3,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "LegendItem",
+    "text": [
+      "Bases: bokeh.model.Model"
+    ],
+    "attrs": [
+      {
+        "name": "label",
+        "descs": [
+          "property type: StringSpec",
+          "A label for this legend. Can be a string, or a column of a\nColumnDataSource. If label is a field, then it must\nbe in the renderers’ data_source."
+        ]
+      },
+      {
+        "name": "renderers",
+        "descs": [
+          "property type: List ( Instance ( GlyphRenderer  ) )",
+          "A list of the glyph renderers to draw in the legend. If label is a field,\nthen all data_sources of renderers must be the same."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"1c353c5b-3bb5-4cb9-b7cb-6c9c7b6d8a2d\",\n  \"js_callbacks\": {},\n  \"label\": null,\n  \"name\": null,\n  \"renderers\": [],\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "PolyAnnotation",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Render a shaded polygonal region as an annotation."
+    ],
+    "attrs": [
+      {
+        "name": "fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha values for the polygon."
+        ]
+      },
+      {
+        "name": "fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color values for the polygon."
+        ]
+      },
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the polygon."
+        ]
+      },
+      {
+        "name": "line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the polygon."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the polygon."
+        ]
+      },
+      {
+        "name": "line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the polygon."
+        ]
+      },
+      {
+        "name": "line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the polygon."
+        ]
+      },
+      {
+        "name": "line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the polygon."
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the polygon."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen locations when\nrendering box annotations on the plot. If unset, use the default x-range."
+        ]
+      },
+      {
+        "name": "xs",
+        "descs": [
+          "property type: Seq ( Float  )",
+          "The x-coordinates of the region to draw."
+        ]
+      },
+      {
+        "name": "xs_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the xs attribute. Interpreted as “data space” units\nby default."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen locations when\nrendering box annotations on the plot. If unset, use the default y-range."
+        ]
+      },
+      {
+        "name": "ys",
+        "descs": [
+          "property type: Seq ( Float  )",
+          "The y-coordinates of the region to draw."
+        ]
+      },
+      {
+        "name": "ys_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the ys attribute. Interpreted as “data space” units\nby default."
+        ]
+      }
+    ],
+    "json": "{\n  \"fill_alpha\": {\n    \"value\": 0.4\n  },\n  \"fill_color\": {\n    \"value\": \"#fff9ba\"\n  },\n  \"id\": \"e7fd938a-a43a-443f-aa06-8259e92de8b5\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"line_alpha\": {\n    \"value\": 0.3\n  },\n  \"line_cap\": \"butt\",\n  \"line_color\": {\n    \"value\": \"#cccccc\"\n  },\n  \"line_dash\": [],\n  \"line_dash_offset\": 0,\n  \"line_join\": \"miter\",\n  \"line_width\": {\n    \"value\": 1\n  },\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": [],\n  \"visible\": true,\n  \"x_range_name\": \"default\",\n  \"xs\": [],\n  \"xs_units\": \"data\",\n  \"y_range_name\": \"default\",\n  \"ys\": [],\n  \"ys_units\": \"data\"\n}\n\n\n  "
+  },
+  {
+    "name": "Span",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Render a horizontal or vertical line span."
+    ],
+    "attrs": [
+      {
+        "name": "dimension",
+        "descs": [
+          "property type: Enum ( Dimension  )",
+          "The direction of the span."
+        ]
+      },
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the span."
+        ]
+      },
+      {
+        "name": "line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the span."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the span."
+        ]
+      },
+      {
+        "name": "line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the span."
+        ]
+      },
+      {
+        "name": "line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the span."
+        ]
+      },
+      {
+        "name": "line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the span."
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the span."
+        ]
+      },
+      {
+        "name": "location",
+        "descs": [
+          "property type: Float",
+          "The location of the span, along dimension."
+        ]
+      },
+      {
+        "name": "location_units",
+        "descs": [
+          "property type: Enum ( SpatialUnits  )",
+          "The unit type for the location attribute. Interpreted as “data space”\nunits by default."
+        ]
+      },
+      {
+        "name": "render_mode",
+        "descs": [
+          "property type: Enum ( RenderMode  )",
+          "Specifies whether the span is rendered as a canvas element or as an\ncss element overlaid on the canvas. The default mode is “canvas”."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen locations when\nrendering annotations on the plot. If unset, use the default x-range."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen locations when\nrendering annotations on the plot. If unset, use the default y-range."
+        ]
+      }
+    ],
+    "json": "{\n  \"dimension\": \"width\",\n  \"id\": \"3beaf01a-7b1a-43c1-99af-03ea0169794c\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"line_alpha\": {\n    \"value\": 1.0\n  },\n  \"line_cap\": \"butt\",\n  \"line_color\": {\n    \"value\": \"black\"\n  },\n  \"line_dash\": [],\n  \"line_dash_offset\": 0,\n  \"line_join\": \"miter\",\n  \"line_width\": {\n    \"value\": 1\n  },\n  \"location\": null,\n  \"location_units\": \"data\",\n  \"name\": null,\n  \"plot\": null,\n  \"render_mode\": \"canvas\",\n  \"tags\": [],\n  \"visible\": true,\n  \"x_range_name\": \"default\",\n  \"y_range_name\": \"default\"\n}\n\n\n  "
+  },
+  {
+    "name": "TextAnnotation",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Base class for annotation models."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"806cb479-4e7a-4974-b5af-64794c654a88\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "Title",
+    "text": [
+      "Bases: bokeh.models.annotations.TextAnnotation",
+      "Render a single title box as an annotation."
+    ],
+    "attrs": [
+      {
+        "name": "align",
+        "descs": [
+          "property type: Enum ( TextAlign  )",
+          "Location to align the title text."
+        ]
+      },
+      {
+        "name": "background_fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha values for the text bounding box."
+        ]
+      },
+      {
+        "name": "background_fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the text bounding box."
+        ]
+      },
+      {
+        "name": "border_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the text bounding box."
+        ]
+      },
+      {
+        "name": "offset",
+        "descs": [
+          "property type: Float",
+          "Offset the text by a number of pixels (can be positive or negative). Shifts the text in\ndifferent directions based on the location of the title:"
+        ]
+      },
+      {
+        "name": "render_mode",
+        "descs": [
+          "property type: Enum ( RenderMode  )",
+          "Specifies whether the text is rendered as a canvas element or as an\ncss element overlaid on the canvas. The default mode is “canvas”."
+        ]
+      },
+      {
+        "name": "text",
+        "descs": [
+          "property type: String",
+          "The text value to render."
+        ]
+      },
+      {
+        "name": "text_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "An alpha value to use to fill text with.",
+          "Acceptable values are floating point numbers between 0 (transparent)\nand 1 (opaque)."
+        ]
+      },
+      {
+        "name": "text_color",
+        "descs": [
+          "property type: ColorSpec",
+          "A color to use to fill text with.",
+          "Acceptable values are:"
+        ]
+      },
+      {
+        "name": "text_font",
+        "descs": [
+          "property type: String",
+          "Name of a font to use for rendering text, e.g., 'times',\n'helvetica'."
+        ]
+      },
+      {
+        "name": "text_font_size",
+        "descs": [
+          "property type: FontSizeSpec"
+        ]
+      },
+      {
+        "name": "text_font_style",
+        "descs": [
+          "property type: Enum ( FontStyle  )",
+          "A style to use for rendering text.",
+          "Acceptable values are:"
+        ]
+      }
+    ],
+    "json": "{\n  \"align\": \"left\",\n  \"background_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"background_fill_color\": {\n    \"value\": null\n  },\n  \"border_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"border_line_cap\": \"butt\",\n  \"border_line_color\": {\n    \"value\": null\n  },\n  \"border_line_dash\": [],\n  \"border_line_dash_offset\": 0,\n  \"border_line_join\": \"miter\",\n  \"border_line_width\": {\n    \"value\": 1\n  },\n  \"id\": \"4321cfb0-0f40-47c7-b2f3-b4e7970f96af\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"name\": null,\n  \"offset\": 0,\n  \"plot\": null,\n  \"render_mode\": \"canvas\",\n  \"tags\": [],\n  \"text\": null,\n  \"text_alpha\": {\n    \"value\": 1.0\n  },\n  \"text_color\": {\n    \"value\": \"#444444\"\n  },\n  \"text_font\": \"helvetica\",\n  \"text_font_size\": {\n    \"value\": \"10pt\"\n  },\n  \"text_font_style\": \"bold\",\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "Tooltip",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Render a tooltip."
+    ],
+    "attrs": [
+      {
+        "name": "attachment",
+        "descs": [
+          "property type: Enum ( Enumeration(horizontal, vertical, left, right, above, below) )",
+          "Whether the tooltip should display to the left or right off the cursor\nposition or above or below it, or if it should be automatically placed\nin the horizontal or vertical dimension."
+        ]
+      },
+      {
+        "name": "inner_only",
+        "descs": [
+          "property type: Bool",
+          "Whether to display outside a central plot frame area."
+        ]
+      },
+      {
+        "name": "show_arrow",
+        "descs": [
+          "property type: Bool",
+          "Whether tooltip’s arrow should be showed."
+        ]
+      }
+    ],
+    "json": "{\n  \"attachment\": \"horizontal\",\n  \"id\": \"347c0e57-00a3-4ee5-8070-908a7c0ee2c8\",\n  \"inner_only\": true,\n  \"js_callbacks\": {},\n  \"level\": \"overlay\",\n  \"name\": null,\n  \"plot\": null,\n  \"show_arrow\": true,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  }
+]

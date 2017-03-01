@@ -1,0 +1,139 @@
+[
+  {
+    "name": "BBoxTileSource",
+    "text": [
+      "Bases: bokeh.models.tiles.MercatorTileSource",
+      "The BBoxTileSource has the same default tile origin as the\nWMTSTileSource but requested tiles use a {XMIN}, {YMIN},\n{XMAX}, {YMAX} e.g. http://your.custom.tile.service?bbox={XMIN},{YMIN},{XMAX},{YMAX}."
+    ],
+    "attrs": [
+      {
+        "name": "use_latlon",
+        "descs": [
+          "property type: Bool",
+          "Flag which indicates option to output {XMIN},{YMIN},{XMAX},{YMAX} in meters or latitude and longitude."
+        ]
+      }
+    ],
+    "json": "{\n  \"attribution\": \"\",\n  \"extra_url_vars\": {},\n  \"id\": \"f72665e6-cfd5-4579-b239-f672d9217220\",\n  \"initial_resolution\": 156543.03392804097,\n  \"js_callbacks\": {},\n  \"max_zoom\": 30,\n  \"min_zoom\": 0,\n  \"name\": null,\n  \"tags\": [],\n  \"tile_size\": 256,\n  \"url\": \"\",\n  \"use_latlon\": false,\n  \"wrap_around\": true,\n  \"x_origin_offset\": 20037508.34,\n  \"y_origin_offset\": 20037508.34\n}\n\n\n  "
+  },
+  {
+    "name": "MercatorTileSource",
+    "text": [
+      "Bases: bokeh.models.tiles.TileSource",
+      "MercatorTileSource is not generally useful to instantiate on its\nown, but is the parent class of other mercator tile services (e.g.\nWMTSTileSource)."
+    ],
+    "attrs": [
+      {
+        "name": "wrap_around",
+        "descs": [
+          "property type: Bool",
+          "Enables continuous horizontal panning by wrapping the x-axis based on\nbounds of map."
+        ]
+      }
+    ],
+    "json": "{\n  \"attribution\": \"\",\n  \"extra_url_vars\": {},\n  \"id\": \"6a685756-3822-4cfc-af22-261167f9a31e\",\n  \"initial_resolution\": 156543.03392804097,\n  \"js_callbacks\": {},\n  \"max_zoom\": 30,\n  \"min_zoom\": 0,\n  \"name\": null,\n  \"tags\": [],\n  \"tile_size\": 256,\n  \"url\": \"\",\n  \"wrap_around\": true,\n  \"x_origin_offset\": 20037508.34,\n  \"y_origin_offset\": 20037508.34\n}\n\n\n  "
+  },
+  {
+    "name": "QUADKEYTileSource",
+    "text": [
+      "Bases: bokeh.models.tiles.MercatorTileSource",
+      "The QUADKEYTileSource has the same tile origin as the WMTSTileSource\nbut requests tiles using a quadkey argument instead of X, Y, Z e.g. http://your.quadkey.tile.host/{Q}.png"
+    ],
+    "attrs": [],
+    "json": "{\n  \"attribution\": \"\",\n  \"extra_url_vars\": {},\n  \"id\": \"f582c7af-8bbd-4c91-ba8c-cf3c41bfbdc3\",\n  \"initial_resolution\": 156543.03392804097,\n  \"js_callbacks\": {},\n  \"max_zoom\": 30,\n  \"min_zoom\": 0,\n  \"name\": null,\n  \"tags\": [],\n  \"tile_size\": 256,\n  \"url\": \"\",\n  \"wrap_around\": true,\n  \"x_origin_offset\": 20037508.34,\n  \"y_origin_offset\": 20037508.34\n}\n\n\n  "
+  },
+  {
+    "name": "TMSTileSource",
+    "text": [
+      "Bases: bokeh.models.tiles.MercatorTileSource",
+      "The TMSTileSource contains tile config info and provides urls for\ntiles based on a templated url e.g. http://your.tms.server.host/{Z}/{X}/{Y}.png.\nThe defining feature of TMS is the tile-origin in located at the bottom-left.",
+      "The TMSTileSource can also be helpful in implementing tile renderers for\ncustom tile sets, including non-spatial datasets."
+    ],
+    "attrs": [],
+    "json": "{\n  \"attribution\": \"\",\n  \"extra_url_vars\": {},\n  \"id\": \"e16485dc-7418-45bc-9a17-225c211fb9b7\",\n  \"initial_resolution\": 156543.03392804097,\n  \"js_callbacks\": {},\n  \"max_zoom\": 30,\n  \"min_zoom\": 0,\n  \"name\": null,\n  \"tags\": [],\n  \"tile_size\": 256,\n  \"url\": \"\",\n  \"wrap_around\": true,\n  \"x_origin_offset\": 20037508.34,\n  \"y_origin_offset\": 20037508.34\n}\n\n\n  "
+  },
+  {
+    "name": "TileSource",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "A base class for all tile source types. TileSource is not generally\nuseful to instantiate on its own. In general, tile sources are used as a\nrequired input for TileRenderer."
+    ],
+    "attrs": [
+      {
+        "name": "attribution",
+        "descs": [
+          "property type: String",
+          "Data provider attribution content. This can include HTML content."
+        ]
+      },
+      {
+        "name": "extra_url_vars",
+        "descs": [
+          "property type: Dict ( String , Any  )",
+          "A dictionary that maps url variable template keys to values.",
+          "These variables are useful for parts of tile urls which do not change from\ntile to tile (e.g. server host name, or layer name)."
+        ]
+      },
+      {
+        "name": "initial_resolution",
+        "descs": [
+          "property type: Float",
+          "Resolution (plot_units / pixels) of minimum zoom level of tileset\nprojection. None to auto-compute."
+        ]
+      },
+      {
+        "name": "max_zoom",
+        "descs": [
+          "property type: Int",
+          "A maximum zoom level for the tile layer. This is the most zoomed-in level."
+        ]
+      },
+      {
+        "name": "min_zoom",
+        "descs": [
+          "property type: Int",
+          "A minimum zoom level for the tile layer. This is the most zoomed-out level."
+        ]
+      },
+      {
+        "name": "tile_size",
+        "descs": [
+          "property type: Int",
+          "Tile size in pixels (e.g. 256)"
+        ]
+      },
+      {
+        "name": "url",
+        "descs": [
+          "property type: String",
+          "Tile service url e.g., http://c.tile.openstreetmap.org/{Z}/{X}/{Y}.png"
+        ]
+      },
+      {
+        "name": "x_origin_offset",
+        "descs": [
+          "property type: Float",
+          "An x-offset in plot coordinates"
+        ]
+      },
+      {
+        "name": "y_origin_offset",
+        "descs": [
+          "property type: Float",
+          "A y-offset in plot coordinates"
+        ]
+      }
+    ],
+    "json": "{\n  \"attribution\": \"\",\n  \"extra_url_vars\": {},\n  \"id\": \"decf2951-1aaf-485f-8a05-9f839bb6070b\",\n  \"initial_resolution\": null,\n  \"js_callbacks\": {},\n  \"max_zoom\": 30,\n  \"min_zoom\": 0,\n  \"name\": null,\n  \"tags\": [],\n  \"tile_size\": 256,\n  \"url\": \"\",\n  \"x_origin_offset\": null,\n  \"y_origin_offset\": null\n}\n\n\n  "
+  },
+  {
+    "name": "WMTSTileSource",
+    "text": [
+      "Bases: bokeh.models.tiles.MercatorTileSource",
+      "The WMTSTileSource behaves much like TMSTileSource but has its\ntile-origin in the top-left.",
+      "This is the most common used tile source for web mapping applications.\nSuch companies as Google, MapQuest, Stamen, Esri, and OpenStreetMap provide\nservice which use the WMTS specification e.g. http://c.tile.openstreetmap.org/{Z}/{X}/{Y}.png."
+    ],
+    "attrs": [],
+    "json": "{\n  \"attribution\": \"\",\n  \"extra_url_vars\": {},\n  \"id\": \"1a26ab17-43c2-4d76-af88-70b191ed9c4d\",\n  \"initial_resolution\": 156543.03392804097,\n  \"js_callbacks\": {},\n  \"max_zoom\": 30,\n  \"min_zoom\": 0,\n  \"name\": null,\n  \"tags\": [],\n  \"tile_size\": 256,\n  \"url\": \"\",\n  \"wrap_around\": true,\n  \"x_origin_offset\": 20037508.34,\n  \"y_origin_offset\": 20037508.34\n}\n\n\n  "
+  }
+]

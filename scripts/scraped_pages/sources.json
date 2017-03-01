@@ -1,0 +1,154 @@
+[
+  {
+    "name": "AjaxDataSource",
+    "text": [
+      "Bases: bokeh.models.sources.RemoteSource"
+    ],
+    "attrs": [
+      {
+        "name": "content_type",
+        "descs": [
+          "property type: String",
+          "Set the “contentType” parameter for the Ajax request."
+        ]
+      },
+      {
+        "name": "http_headers",
+        "descs": [
+          "property type: Dict ( String , String  )",
+          "HTTP headers to set for the Ajax request."
+        ]
+      },
+      {
+        "name": "if_modified",
+        "descs": [
+          "property type: Bool",
+          "Whether to include an If-Modified-Since header in AJAX requests\nto the server. If this header is supported by the server, then only\nnew data since the last request will be returned."
+        ]
+      },
+      {
+        "name": "max_size",
+        "descs": [
+          "property type: Int",
+          "Maximum size of the data array being kept after each pull requests.\nLarger than that size, the data will be right shifted."
+        ]
+      },
+      {
+        "name": "method",
+        "descs": [
+          "property type: Enum ( Enumeration(POST, GET) )",
+          "http method - GET or POST"
+        ]
+      },
+      {
+        "name": "mode",
+        "descs": [
+          "property type: Enum ( Enumeration(replace, append) )",
+          "Whether to append new data to existing data (up to max_size),\nor to replace existing data entirely."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"column_names\": [],\n  \"content_type\": \"application/json\",\n  \"data\": {},\n  \"data_url\": null,\n  \"http_headers\": {},\n  \"id\": \"b16d37a0-3398-451b-819c-3e2963dd20d0\",\n  \"if_modified\": false,\n  \"js_callbacks\": {},\n  \"max_size\": null,\n  \"method\": \"POST\",\n  \"mode\": \"replace\",\n  \"name\": null,\n  \"polling_interval\": null,\n  \"selected\": {\n    \"0d\": {\n      \"glyph\": null,\n      \"indices\": []\n    },\n    \"1d\": {\n      \"indices\": []\n    },\n    \"2d\": {}\n  },\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ColumnDataSource",
+    "text": [
+      "Bases: bokeh.models.sources.ColumnarDataSource",
+      "Maps names of columns to sequences or arrays.",
+      "If the ColumnDataSource initializer is called with a single argument that\nis a dict or pandas.DataFrame, that argument is used as the value for the\n“data” attribute. For example:"
+    ],
+    "attrs": [
+      {
+        "name": "data",
+        "descs": [
+          "property type: ColumnData ( String , Seq ( Any  ) )",
+          "Mapping of column names to sequences of data. The data can be, e.g,\nPython lists or tuples, NumPy arrays, etc."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"column_names\": [],\n  \"data\": {},\n  \"id\": \"c40499d6-ac2f-43d4-a2e9-3b728eb48a15\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"selected\": {\n    \"0d\": {\n      \"glyph\": null,\n      \"indices\": []\n    },\n    \"1d\": {\n      \"indices\": []\n    },\n    \"2d\": {}\n  },\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ColumnarDataSource",
+    "text": [
+      "Bases: bokeh.models.sources.DataSource",
+      "A baseclass for data source types, which can be mapped onto\na columnar format. Not useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "column_names",
+        "descs": [
+          "property type: List ( String  )",
+          "An list of names for all the columns in this DataSource."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"column_names\": [],\n  \"id\": \"e4e1a426-33af-4b1c-a396-5ac0db1fad28\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"selected\": {\n    \"0d\": {\n      \"glyph\": null,\n      \"indices\": []\n    },\n    \"1d\": {\n      \"indices\": []\n    },\n    \"2d\": {}\n  },\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "DataSource",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "A base class for data source types. DataSource is\nnot generally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the selection is changed."
+        ]
+      },
+      {
+        "name": "selected",
+        "descs": [
+          "property type: Dict ( String , Dict ( String , Any  ) )",
+          "A dict to indicate selected indices on different dimensions on this DataSource. Keys are:",
+          "dict with the following keys:",
+          "patches) was hit:",
+          "hit/selected"
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"id\": \"86a90b88-25f2-4684-820d-fdeb32d67c64\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"selected\": {\n    \"0d\": {\n      \"glyph\": null,\n      \"indices\": []\n    },\n    \"1d\": {\n      \"indices\": []\n    },\n    \"2d\": {}\n  },\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "GeoJSONDataSource",
+    "text": [
+      "Bases: bokeh.models.sources.ColumnarDataSource"
+    ],
+    "attrs": [
+      {
+        "name": "geojson",
+        "descs": [
+          "property type: JSON",
+          "GeoJSON that contains features for plotting. Currently GeoJSONDataSource can\nonly process a FeatureCollection or GeometryCollection."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"column_names\": [],\n  \"geojson\": null,\n  \"id\": \"aab9f4a9-720d-4eeb-a9c8-ffbe9c864170\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"selected\": {\n    \"0d\": {\n      \"glyph\": null,\n      \"indices\": []\n    },\n    \"1d\": {\n      \"indices\": []\n    },\n    \"2d\": {}\n  },\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "RemoteSource",
+    "text": [
+      "Bases: bokeh.models.sources.ColumnDataSource"
+    ],
+    "attrs": [
+      {
+        "name": "data_url",
+        "descs": [
+          "property type: String",
+          "The URL to the endpoint for the data."
+        ]
+      },
+      {
+        "name": "polling_interval",
+        "descs": [
+          "property type: Int",
+          "polling interval for updating data source in milliseconds"
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"column_names\": [],\n  \"data\": {},\n  \"data_url\": null,\n  \"id\": \"2c554964-4a44-41d5-ab19-86c4c272341a\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"polling_interval\": null,\n  \"selected\": {\n    \"0d\": {\n      \"glyph\": null,\n      \"indices\": []\n    },\n    \"1d\": {\n      \"indices\": []\n    },\n    \"2d\": {}\n  },\n  \"tags\": []\n}\n\n\n  "
+  }
+]

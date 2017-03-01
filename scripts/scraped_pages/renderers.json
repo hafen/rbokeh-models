@@ -1,0 +1,184 @@
+[
+  {
+    "name": "DataRenderer",
+    "text": [
+      "Bases: bokeh.models.renderers.Renderer",
+      "An abstract base class for data renderer types (e.g. GlyphRenderer, TileRenderer)."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"0e0ca475-8beb-407b-849b-d58ea94bc656\",\n  \"js_callbacks\": {},\n  \"level\": \"image\",\n  \"name\": null,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "DynamicImageRenderer",
+    "text": [
+      "Bases: bokeh.models.renderers.DataRenderer"
+    ],
+    "attrs": [
+      {
+        "name": "alpha",
+        "descs": [
+          "property type: Float",
+          "tile opacity 0.0 - 1.0"
+        ]
+      },
+      {
+        "name": "image_source",
+        "descs": [
+          "property type: Instance ( ImageSource  )",
+          "Image source to use when rendering on the plot."
+        ]
+      },
+      {
+        "name": "render_parents",
+        "descs": [
+          "property type: Bool",
+          "Flag enable/disable drawing of parent tiles while waiting for new tiles to arrive. Default value is True."
+        ]
+      }
+    ],
+    "json": "{\n  \"alpha\": 1.0,\n  \"id\": \"6e20d8d0-63d3-45d0-8cbd-ebd8509d510a\",\n  \"image_source\": null,\n  \"js_callbacks\": {},\n  \"level\": \"underlay\",\n  \"name\": null,\n  \"render_parents\": true,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "GlyphRenderer",
+    "text": [
+      "Bases: bokeh.models.renderers.DataRenderer"
+    ],
+    "attrs": [
+      {
+        "name": "data_source",
+        "descs": [
+          "property type: Instance ( DataSource  )",
+          "Local data source to use when rendering glyphs on the plot."
+        ]
+      },
+      {
+        "name": "glyph",
+        "descs": [
+          "property type: Instance ( Glyph  )",
+          "The glyph to render, in conjunction with the supplied data source\nand ranges."
+        ]
+      },
+      {
+        "name": "hover_glyph",
+        "descs": [
+          "property type: Instance ( Glyph  )",
+          "An optional glyph used for inspected points, e.g., those that are\nbeing hovered over by a HoverTool."
+        ]
+      },
+      {
+        "name": "nonselection_glyph",
+        "descs": [
+          "property type: Instance ( Glyph  )",
+          "An optional glyph used for explicitly non-selected points\n(i.e., non-selected when there are other points that are selected,\nbut not when no points at all are selected.)"
+        ]
+      },
+      {
+        "name": "selection_glyph",
+        "descs": [
+          "property type: Instance ( Glyph  )",
+          "An optional glyph used for selected points."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen\nlocations when rendering glyphs on the plot. If unset, use the\ndefault x-range."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen\nlocations when rendering glyphs on the plot. If unset, use the\ndefault -range."
+        ]
+      }
+    ],
+    "json": "{\n  \"data_source\": null,\n  \"glyph\": null,\n  \"hover_glyph\": null,\n  \"id\": \"666a21a6-f945-43cb-b30b-04c88b8330e2\",\n  \"js_callbacks\": {},\n  \"level\": \"glyph\",\n  \"name\": null,\n  \"nonselection_glyph\": null,\n  \"selection_glyph\": null,\n  \"tags\": [],\n  \"visible\": true,\n  \"x_range_name\": \"default\",\n  \"y_range_name\": \"default\"\n}\n\n\n  "
+  },
+  {
+    "name": "GuideRenderer",
+    "text": [
+      "Bases: bokeh.models.renderers.Renderer",
+      "A base class for all guide renderer types. GuideRenderer is\nnot generally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "plot",
+        "descs": [
+          "property type: Instance ( Plot  )",
+          "The plot to which this guide renderer is attached."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"85eed8a9-e35c-49c2-9240-3048383ad8d2\",\n  \"js_callbacks\": {},\n  \"level\": \"overlay\",\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "Renderer",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "An abstract base class for renderer types."
+    ],
+    "attrs": [
+      {
+        "name": "level",
+        "descs": [
+          "property type: Enum ( RenderLevel  )",
+          "Specifies the level in which to paint this renderer."
+        ]
+      },
+      {
+        "name": "visible",
+        "descs": [
+          "property type: Bool",
+          "Is the renderer visible. Default: True"
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"b2e501cc-fa2c-4b6e-9ae6-595fcbf79466\",\n  \"js_callbacks\": {},\n  \"level\": \"image\",\n  \"name\": null,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "TileRenderer",
+    "text": [
+      "Bases: bokeh.models.renderers.DataRenderer"
+    ],
+    "attrs": [
+      {
+        "name": "alpha",
+        "descs": [
+          "property type: Float",
+          "tile opacity 0.0 - 1.0"
+        ]
+      },
+      {
+        "name": "render_parents",
+        "descs": [
+          "property type: Bool",
+          "Flag enable/disable drawing of parent tiles while waiting for new tiles to arrive. Default value is True."
+        ]
+      },
+      {
+        "name": "tile_source",
+        "descs": [
+          "property type: Instance ( TileSource  )",
+          "Local data source to use when rendering glyphs on the plot."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen\nlocations when rendering glyphs on the plot. If unset, use the\ndefault x-range."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen\nlocations when rendering glyphs on the plot. If unset, use the\ndefault y-range."
+        ]
+      }
+    ],
+    "json": "{\n  \"alpha\": 1.0,\n  \"id\": \"2f58cead-c0ea-475f-8fde-598f4a79fd8e\",\n  \"js_callbacks\": {},\n  \"level\": \"underlay\",\n  \"name\": null,\n  \"render_parents\": true,\n  \"tags\": [],\n  \"tile_source\": {\n    \"id\": \"1504638a-623d-4756-8209-3b8f1eea7549\",\n    \"type\": \"WMTSTileSource\"\n  },\n  \"visible\": true,\n  \"x_range_name\": \"default\",\n  \"y_range_name\": \"default\"\n}\n\n\n  "
+  }
+]

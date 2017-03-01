@@ -1,0 +1,110 @@
+[
+  {
+    "name": "Interpolator",
+    "text": [
+      "Bases: bokeh.models.transforms.Transform",
+      "Base class for interpolator transforms.",
+      "Interpolators return the value of a function which has been evaluated\nbetween specified (x, y) pairs of data.  As an example, if two control\npoint pairs were provided to the interpolator, a linear interpolaction\nat a specific value of ‘x’ would result in the value of ‘y’ which existed\non the line conneting the two control points.",
+      "The control point pairs for the interpolators can be specified through either",
+      "This is the base class and is not intended to end use.  Please see the\ndocumentation for the final derived classes (Jitter, LineraInterpolator,\nStepInterpolator) for mor information on their specific methods of\ninterpolation."
+    ],
+    "attrs": [
+      {
+        "name": "clip",
+        "descs": [
+          "property type: Bool",
+          "Determine if the interpolation should clip the result to include only values inside its predefined range.\nIf this is set to False, it will return the most value of the closest point."
+        ]
+      },
+      {
+        "name": "data",
+        "descs": [
+          "property type: Instance ( ColumnarDataSource  )",
+          "Data which defines the source for the named columns if a string is passed to either the x or y parameters."
+        ]
+      },
+      {
+        "name": "x",
+        "descs": [
+          "property type: Either ( String , Seq ( Float  ) )",
+          "Independant coordiante denoting the location of a point."
+        ]
+      },
+      {
+        "name": "y",
+        "descs": [
+          "property type: Either ( String , Seq ( Float  ) )",
+          "Dependant coordinate denoting the value of a point at a location."
+        ]
+      }
+    ],
+    "json": "{\n  \"clip\": true,\n  \"data\": null,\n  \"id\": \"bab0aef5-5ed8-4772-800b-aafc80e12ff8\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": [],\n  \"x\": null,\n  \"y\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Jitter",
+    "text": [
+      "Bases: bokeh.models.transforms.Transform",
+      "Apply either a uniform or normally sampled random jitter to data."
+    ],
+    "attrs": [
+      {
+        "name": "distribution",
+        "descs": [
+          "property type: Enum ( JitterRandomDistribution  )",
+          "The random distribution upon which to pull the random scatter"
+        ]
+      },
+      {
+        "name": "mean",
+        "descs": [
+          "property type: Float",
+          "The central value for the random sample"
+        ]
+      },
+      {
+        "name": "width",
+        "descs": [
+          "property type: Float",
+          "The width (absolute for uniform distribution and sigma for the normal distribution) of the random sample."
+        ]
+      }
+    ],
+    "json": "{\n  \"distribution\": \"uniform\",\n  \"id\": \"376172ce-dcad-42b1-b587-3192cecfc4dd\",\n  \"js_callbacks\": {},\n  \"mean\": 0,\n  \"name\": null,\n  \"tags\": [],\n  \"width\": 1\n}\n\n\n  "
+  },
+  {
+    "name": "LinearInterpolator",
+    "text": [
+      "Bases: bokeh.models.transforms.Interpolator",
+      "Compute a linear interpolation between the control points provided throught the x, y, and data parameters."
+    ],
+    "attrs": [],
+    "json": "{\n  \"clip\": true,\n  \"data\": null,\n  \"id\": \"a0c2702b-3f98-4cb2-a4e6-3b686f6f2a2a\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": [],\n  \"x\": null,\n  \"y\": null\n}\n\n\n  "
+  },
+  {
+    "name": "StepInterpolator",
+    "text": [
+      "Bases: bokeh.models.transforms.Interpolator",
+      "Compute a step-wise interpolation between the points provided throught the x, y, and data parameters."
+    ],
+    "attrs": [
+      {
+        "name": "mode",
+        "descs": [
+          "property type: Enum ( StepMode  )",
+          "Adjust the behavior of the returned value in relation to the control points.  The parameter can assume one of three values:"
+        ]
+      }
+    ],
+    "json": "{\n  \"clip\": true,\n  \"data\": null,\n  \"id\": \"92e49f79-6b90-48d1-ba9b-748d71044115\",\n  \"js_callbacks\": {},\n  \"mode\": \"after\",\n  \"name\": null,\n  \"tags\": [],\n  \"x\": null,\n  \"y\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Transform",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "Base class for Transform models that represent a computation\nto be carried out on the client-side.",
+      "JavaScript implementations should implement the following methods:"
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"8ba2b586-4ca1-45d5-9568-d8505c3a0b42\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  }
+]

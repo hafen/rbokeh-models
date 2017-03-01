@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Div",
+    "text": [
+      "Bases: bokeh.models.widgets.markups.Markup",
+      "A block (div) of text."
+    ],
+    "attrs": [
+      {
+        "name": "render_as_text",
+        "descs": [
+          "property type: Bool",
+          "Should the text be rendered as raw text (False, default), or should the text be interprited as an HTML string (True)"
+        ]
+      }
+    ],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"51c715af-7a22-4ac1-af47-45036607e55c\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"render_as_text\": false,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"text\": \"\",\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Markup",
+    "text": [
+      "Bases: bokeh.models.widgets.widget.Widget",
+      "Base class for HTML markup widget models."
+    ],
+    "attrs": [
+      {
+        "name": "text",
+        "descs": [
+          "property type: String",
+          "The contents of the widget."
+        ]
+      }
+    ],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"5622f0a1-5a76-4e81-b7fe-f4e97a0bb769\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"text\": \"\",\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Paragraph",
+    "text": [
+      "Bases: bokeh.models.widgets.markups.Markup",
+      "A block (paragraph) of text."
+    ],
+    "attrs": [],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"8122a2a0-2081-411c-a1de-c9448e9c0177\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"text\": \"\",\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "PreText",
+    "text": [
+      "Bases: bokeh.models.widgets.markups.Paragraph",
+      "A block (paragraph) of pre-formatted text."
+    ],
+    "attrs": [],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"20ce2041-ee9c-45a8-a864-7c6b0168b9ae\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"text\": \"\",\n  \"width\": null\n}\n\n\n  "
+  }
+]

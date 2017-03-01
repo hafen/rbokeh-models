@@ -5,7 +5,7 @@ urls <- c(paste0("http://bokeh.pydata.org/en/latest/docs/reference/models/", url
 
 outfiles <- gsub("html", "json", urlsb)
 outfiles <- c(gsub("/", "_", outfiles), "model.json")
-outfiles <- paste0("_ignore/scrape_pages/", outfiles)
+outfiles <- paste0("scripts/scraped_pages/", outfiles)
 
 require(RSelenium)
 pJS <- phantom()

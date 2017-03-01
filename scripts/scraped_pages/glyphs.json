@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Glyph",
+    "text": [
+      "Base class for all glyph models."
+    ],
+    "attrs": [
+      {
+        "name": "visible",
+        "descs": [
+          "property type: Bool",
+          "Whether the glyph should render or not."
+        ]
+      }
+    ],
+    "json": ""
+  }
+]

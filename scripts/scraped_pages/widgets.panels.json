@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Panel",
+    "text": [
+      "Bases: bokeh.models.widgets.widget.Widget",
+      "A single-widget container with title bar and controls."
+    ],
+    "attrs": [
+      {
+        "name": "child",
+        "descs": [
+          "property type: Instance ( LayoutDOM  )",
+          "The child widget. If you need more children, use a layout widget,\ne.g. HBox or VBox."
+        ]
+      },
+      {
+        "name": "closable",
+        "descs": [
+          "property type: Bool",
+          "Whether this panel is closeable or not. If True, an “x” button will\nappear."
+        ]
+      },
+      {
+        "name": "title",
+        "descs": [
+          "property type: String",
+          "An optional text title of the panel."
+        ]
+      }
+    ],
+    "json": "{\n  \"child\": null,\n  \"closable\": false,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"747baf83-feea-4c82-927f-472085da7d9d\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": \"\",\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Tabs",
+    "text": [
+      "Bases: bokeh.models.widgets.widget.Widget",
+      "A panel widget with navigation tabs."
+    ],
+    "attrs": [
+      {
+        "name": "active",
+        "descs": [
+          "property type: Int",
+          "The index of the active tab."
+        ]
+      },
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the button is activated."
+        ]
+      },
+      {
+        "name": "tabs",
+        "descs": [
+          "property type: List ( Instance ( Panel  ) )",
+          "The list of child panel widgets."
+        ]
+      }
+    ],
+    "json": "{\n  \"active\": 0,\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"136de12f-5328-438a-b4b9-ece4073b34b9\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tabs\": [],\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  }
+]

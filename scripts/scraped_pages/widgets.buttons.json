@@ -1,0 +1,118 @@
+[
+  {
+    "name": "AbstractButton",
+    "text": [
+      "Bases: bokeh.models.widgets.widget.Widget, bokeh.models.widgets.buttons.ButtonLike",
+      "A base class that defines common properties for all\nbutton types. AbstractButton is not generally useful to\ninstantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the button is activated."
+        ]
+      },
+      {
+        "name": "icon",
+        "descs": [
+          "property type: Instance ( AbstractIcon  )",
+          "An optional image appearing to the left of button’s text."
+        ]
+      },
+      {
+        "name": "label",
+        "descs": [
+          "property type: String",
+          "The text label for the button to display."
+        ]
+      }
+    ],
+    "json": "{\n  \"button_type\": \"default\",\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"icon\": null,\n  \"id\": \"9a1e463f-491b-4044-bbd7-465a7dc2bcdb\",\n  \"js_callbacks\": {},\n  \"label\": \"Button\",\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Button",
+    "text": [
+      "Bases: bokeh.models.widgets.buttons.AbstractButton",
+      "A click button."
+    ],
+    "attrs": [
+      {
+        "name": "clicks",
+        "descs": [
+          "property type: Int",
+          "A private property used to trigger on_click event handler."
+        ]
+      }
+    ],
+    "json": "{\n  \"button_type\": \"default\",\n  \"callback\": null,\n  \"clicks\": 0,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"icon\": null,\n  \"id\": \"f7f59101-907e-4285-af4f-e8a40d6d76c0\",\n  \"js_callbacks\": {},\n  \"label\": \"Button\",\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "ButtonLike",
+    "text": [
+      "Shared properties for button-like widgets."
+    ],
+    "attrs": [
+      {
+        "name": "button_type",
+        "descs": [
+          "property type: Enum ( ButtonType  )",
+          "A style for the button, signifying it’s role."
+        ]
+      },
+      {
+        "name": "type",
+        "descs": []
+      }
+    ],
+    "json": ""
+  },
+  {
+    "name": "Dropdown",
+    "text": [
+      "Bases: bokeh.models.widgets.buttons.AbstractButton",
+      "A dropdown button."
+    ],
+    "attrs": [
+      {
+        "name": "default_value",
+        "descs": [
+          "property type: String",
+          "The default value, otherwise the first item in menu will be used."
+        ]
+      },
+      {
+        "name": "menu",
+        "descs": [
+          "property type: List ( Tuple ( String , String  ) )",
+          "Button’s dropdown menu consisting of entries containing item’s text and\nvalue name. Use None as a menu separator."
+        ]
+      },
+      {
+        "name": "value",
+        "descs": [
+          "property type: String",
+          "A private property used to trigger on_click event handler."
+        ]
+      }
+    ],
+    "json": "{\n  \"button_type\": \"default\",\n  \"callback\": null,\n  \"css_classes\": null,\n  \"default_value\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"icon\": null,\n  \"id\": \"68096891-c1e9-4a00-b27e-435d0c9057f3\",\n  \"js_callbacks\": {},\n  \"label\": \"Dropdown\",\n  \"menu\": [],\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"value\": null,\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Toggle",
+    "text": [
+      "Bases: bokeh.models.widgets.buttons.AbstractButton",
+      "A two-state toggle button."
+    ],
+    "attrs": [
+      {
+        "name": "active",
+        "descs": [
+          "property type: Bool",
+          "The initial state of a button. Also used to trigger on_click event\nhandler."
+        ]
+      }
+    ],
+    "json": "{\n  \"active\": false,\n  \"button_type\": \"default\",\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"icon\": null,\n  \"id\": \"a1706d29-83e9-4cb9-af77-1c558374635b\",\n  \"js_callbacks\": {},\n  \"label\": \"Toggle\",\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  }
+]

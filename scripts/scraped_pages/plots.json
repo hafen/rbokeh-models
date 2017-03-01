@@ -1,0 +1,427 @@
+[
+  {
+    "name": "Plot",
+    "text": [
+      "Bases: bokeh.models.layouts.LayoutDOM",
+      "Model representing a plot, containing glyphs, guides, annotations."
+    ],
+    "attrs": [
+      {
+        "name": "above",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "A list of renderers to occupy the area above of the plot."
+        ]
+      },
+      {
+        "name": "background_fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha for the plot background style."
+        ]
+      },
+      {
+        "name": "background_fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color for the plot background style."
+        ]
+      },
+      {
+        "name": "below",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "A list of renderers to occupy the area below of the plot."
+        ]
+      },
+      {
+        "name": "border_fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha for the plot border style."
+        ]
+      },
+      {
+        "name": "border_fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color for the plot border style."
+        ]
+      },
+      {
+        "name": "extra_x_ranges",
+        "descs": [
+          "property type: Dict ( String , Instance ( Range  ) )",
+          "Additional named ranges to make available for mapping x-coordinates.",
+          "This is useful for adding additional axes."
+        ]
+      },
+      {
+        "name": "extra_y_ranges",
+        "descs": [
+          "property type: Dict ( String , Instance ( Range  ) )",
+          "Additional named ranges to make available for mapping y-coordinates.",
+          "This is useful for adding additional axes."
+        ]
+      },
+      {
+        "name": "h_symmetry",
+        "descs": [
+          "property type: Bool",
+          "Whether the total horizontal padding on both sides of the plot will\nbe made equal (the left or right padding amount, whichever is larger)."
+        ]
+      },
+      {
+        "name": "hidpi",
+        "descs": [
+          "property type: Bool",
+          "Whether to use HiDPI mode when available."
+        ]
+      },
+      {
+        "name": "inner_height",
+        "descs": [
+          "property type: Int",
+          "This is the exact height of the plotting canvas, i.e. the height of\nthe actual plot, without toolbars etc. Note this is computed in a\nweb browser, so this property will work only in backends capable of\nbidirectional communication (server, notebook)."
+        ]
+      },
+      {
+        "name": "inner_width",
+        "descs": [
+          "property type: Int",
+          "This is the exact width of the plotting canvas, i.e. the width of\nthe actual plot, without toolbars etc. Note this is computed in a\nweb browser, so this property will work only in backends capable of\nbidirectional communication (server, notebook)."
+        ]
+      },
+      {
+        "name": "left",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "A list of renderers to occupy the area to the left of the plot."
+        ]
+      },
+      {
+        "name": "lod_factor",
+        "descs": [
+          "property type: Int",
+          "Decimation factor to use when applying level-of-detail decimation."
+        ]
+      },
+      {
+        "name": "lod_interval",
+        "descs": [
+          "property type: Int",
+          "Interval (in ms) during which an interactive tool event will enable\nlevel-of-detail downsampling."
+        ]
+      },
+      {
+        "name": "lod_threshold",
+        "descs": [
+          "property type: Int",
+          "A number of data points, above which level-of-detail downsampling may\nbe performed by glyph renderers. Set to None to disable any\nlevel-of-detail downsampling."
+        ]
+      },
+      {
+        "name": "lod_timeout",
+        "descs": [
+          "property type: Int",
+          "Timeout (in ms) for checking whether interactive tool events are still\noccurring. Once level-of-detail mode is enabled, a check is made every\nlod_timeout ms. If no interactive tool events have happened,\nlevel-of-detail mode is disabled."
+        ]
+      },
+      {
+        "name": "min_border",
+        "descs": [
+          "property type: Int",
+          "A convenience property to set all all the min_border_X properties\nto the same value. If an individual border property is explicitly set,\nit will override min_border."
+        ]
+      },
+      {
+        "name": "min_border_bottom",
+        "descs": [
+          "property type: Int",
+          "Minimum size in pixels of the padding region below the bottom of\nthe central plot region."
+        ]
+      },
+      {
+        "name": "min_border_left",
+        "descs": [
+          "property type: Int",
+          "Minimum size in pixels of the padding region to the left of\nthe central plot region."
+        ]
+      },
+      {
+        "name": "min_border_right",
+        "descs": [
+          "property type: Int",
+          "Minimum size in pixels of the padding region to the right of\nthe central plot region."
+        ]
+      },
+      {
+        "name": "min_border_top",
+        "descs": [
+          "property type: Int",
+          "Minimum size in pixels of the padding region above the top of the\ncentral plot region."
+        ]
+      },
+      {
+        "name": "outline_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha for the plot border outline."
+        ]
+      },
+      {
+        "name": "outline_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap for the plot border outline."
+        ]
+      },
+      {
+        "name": "outline_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color for the plot border outline."
+        ]
+      },
+      {
+        "name": "outline_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash for the plot border outline."
+        ]
+      },
+      {
+        "name": "outline_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset for the plot border outline."
+        ]
+      },
+      {
+        "name": "outline_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join for the plot border outline."
+        ]
+      },
+      {
+        "name": "outline_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width for the plot border outline."
+        ]
+      },
+      {
+        "name": "plot_height",
+        "descs": [
+          "property type: Int",
+          "Total height of the entire plot (including any axes, titles,\nborder padding, etc.)"
+        ]
+      },
+      {
+        "name": "plot_width",
+        "descs": [
+          "property type: Int",
+          "Total width of the entire plot (including any axes, titles,\nborder padding, etc.)"
+        ]
+      },
+      {
+        "name": "renderers",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "A list of all renderers for this plot, including guides and annotations\nin addition to glyphs and markers.",
+          "This property can be manipulated by hand, but the add_glyph and\nadd_layout methods are recommended to help make sure all necessary\nsetup is performed."
+        ]
+      },
+      {
+        "name": "right",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "A list of renderers to occupy the area to the right of the plot."
+        ]
+      },
+      {
+        "name": "title",
+        "descs": [
+          "property type: TitleProp",
+          "A title for the plot. Can be a text string or a Title annotation. Default is Title(text=””)."
+        ]
+      },
+      {
+        "name": "title_location",
+        "descs": [
+          "property type: Enum ( Location  )",
+          "Where the title will be located. Titles on the left or right side\nwill be rotated."
+        ]
+      },
+      {
+        "name": "tool_events",
+        "descs": [
+          "property type: Instance ( ToolEvents  )",
+          "A ToolEvents object to share and report tool events."
+        ]
+      },
+      {
+        "name": "toolbar",
+        "descs": [
+          "property type: Instance ( Toolbar  )",
+          "The toolbar associated with this plot which holds all the tools.",
+          "The toolbar is automatically created with the plot."
+        ]
+      },
+      {
+        "name": "toolbar_location",
+        "descs": [
+          "property type: Enum ( Location  )",
+          "Where the toolbar will be located. If set to None, no toolbar\nwill be attached to the plot."
+        ]
+      },
+      {
+        "name": "toolbar_sticky",
+        "descs": [
+          "property type: Bool",
+          "Stick the toolbar to the edge of the plot. Default: True. If False,\nthe toolbar will be outside of the axes, titles etc."
+        ]
+      },
+      {
+        "name": "v_symmetry",
+        "descs": [
+          "property type: Bool",
+          "Whether the total vertical padding on both sides of the plot will\nbe made equal (the top or bottom padding amount, whichever is larger)."
+        ]
+      },
+      {
+        "name": "webgl",
+        "descs": [
+          "property type: Bool",
+          "Whether WebGL is enabled for this plot. If True, the glyphs that\nsupport this will render via WebGL instead of the 2D canvas."
+        ]
+      },
+      {
+        "name": "x_mapper_type",
+        "descs": [
+          "property type: Either ( Auto , String  )",
+          "What kind of mapper to use to convert x-coordinates in data space\ninto x-coordinates in screen space.",
+          "Typically this can be determined automatically, but this property\ncan be useful to, e.g., show datetime values as floating point\n“seconds since epoch” instead of formatted dates."
+        ]
+      },
+      {
+        "name": "x_range",
+        "descs": [
+          "property type: Instance ( Range  )",
+          "The (default) data range of the horizontal dimension of the plot."
+        ]
+      },
+      {
+        "name": "y_mapper_type",
+        "descs": [
+          "property type: Either ( Auto , String  )",
+          "What kind of mapper to use to convert y-coordinates in data space\ninto y-coordinates in screen space.",
+          "Typically this can be determined automatically, but this property\ncan be useful to, e.g., show datetime values as floating point\n“seconds since epoch” instead of formatted dates"
+        ]
+      },
+      {
+        "name": "y_range",
+        "descs": [
+          "property type: Instance ( Range  )",
+          "The (default) data range of the vertical dimension of the plot."
+        ]
+      },
+      {
+        "name": "axis",
+        "descs": [
+          "Splattable list of Axis objects."
+        ]
+      },
+      {
+        "name": "background_fill",
+        "descs": []
+      },
+      {
+        "name": "border_fill",
+        "descs": []
+      },
+      {
+        "name": "grid",
+        "descs": [
+          "Splattable list of Grid objects."
+        ]
+      },
+      {
+        "name": "legend",
+        "descs": [
+          "Splattable list of Legend objects."
+        ]
+      },
+      {
+        "name": "logo",
+        "descs": []
+      },
+      {
+        "name": "responsive",
+        "descs": []
+      },
+      {
+        "name": "title_standoff",
+        "descs": []
+      },
+      {
+        "name": "title_text_align",
+        "descs": []
+      },
+      {
+        "name": "title_text_alpha",
+        "descs": []
+      },
+      {
+        "name": "title_text_baseline",
+        "descs": []
+      },
+      {
+        "name": "title_text_color",
+        "descs": []
+      },
+      {
+        "name": "title_text_font",
+        "descs": []
+      },
+      {
+        "name": "title_text_font_size",
+        "descs": []
+      },
+      {
+        "name": "title_text_font_style",
+        "descs": []
+      },
+      {
+        "name": "tools",
+        "descs": []
+      },
+      {
+        "name": "xaxis",
+        "descs": [
+          "Splattable list of Axis objects for the x dimension."
+        ]
+      },
+      {
+        "name": "xgrid",
+        "descs": [
+          "Splattable list of Grid objects for the x dimension."
+        ]
+      },
+      {
+        "name": "yaxis",
+        "descs": [
+          "Splattable list of Axis objects for the y dimension."
+        ]
+      },
+      {
+        "name": "ygrid",
+        "descs": [
+          "Splattable list of Grid objects for the y dimension."
+        ]
+      }
+    ],
+    "json": "{\n  \"above\": [],\n  \"background_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"background_fill_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"below\": [],\n  \"border_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"border_fill_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"extra_x_ranges\": {},\n  \"extra_y_ranges\": {},\n  \"h_symmetry\": true,\n  \"height\": null,\n  \"hidpi\": true,\n  \"id\": \"5b5f2c41-3c1c-4965-aa25-73922f47892e\",\n  \"js_callbacks\": {},\n  \"left\": [],\n  \"lod_factor\": 10,\n  \"lod_interval\": 300,\n  \"lod_threshold\": 2000,\n  \"lod_timeout\": 500,\n  \"min_border\": 5,\n  \"min_border_bottom\": null,\n  \"min_border_left\": null,\n  \"min_border_right\": null,\n  \"min_border_top\": null,\n  \"name\": null,\n  \"outline_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"outline_line_cap\": \"butt\",\n  \"outline_line_color\": {\n    \"value\": \"#e5e5e5\"\n  },\n  \"outline_line_dash\": [],\n  \"outline_line_dash_offset\": 0,\n  \"outline_line_join\": \"miter\",\n  \"outline_line_width\": {\n    \"value\": 1\n  },\n  \"plot_height\": 600,\n  \"plot_width\": 600,\n  \"renderers\": [],\n  \"right\": [],\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": {\n    \"id\": \"e0831177-9fc9-4ab8-a385-fac5a1584399\",\n    \"type\": \"Title\"\n  },\n  \"title_location\": \"above\",\n  \"tool_events\": {\n    \"id\": \"2db04914-27d3-4f31-8ef6-adccfa2b6e55\",\n    \"type\": \"ToolEvents\"\n  },\n  \"toolbar\": {\n    \"id\": \"a21d402b-cd34-424b-81c7-5d981d92b7c5\",\n    \"type\": \"Toolbar\"\n  },\n  \"toolbar_location\": \"right\",\n  \"toolbar_sticky\": true,\n  \"v_symmetry\": false,\n  \"webgl\": false,\n  \"width\": null,\n  \"x_mapper_type\": \"auto\",\n  \"x_range\": null,\n  \"y_mapper_type\": \"auto\",\n  \"y_range\": null\n}\n\n\n  "
+  }
+]

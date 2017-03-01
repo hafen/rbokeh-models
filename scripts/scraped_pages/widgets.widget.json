@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Widget",
+    "text": [
+      "Bases: bokeh.models.layouts.LayoutDOM",
+      "A base class for all interactive widget types."
+    ],
+    "attrs": [],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"fbcab11e-7818-488a-9877-83307837756c\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  }
+]

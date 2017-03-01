@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Marker",
+    "text": [
+      "Base class for glyphs that are simple markers with line and\nfill properties, located at an (x, y) location with a specified\nsize."
+    ],
+    "attrs": [
+      {
+        "name": "angle",
+        "descs": [
+          "property type: AngleSpec",
+          "The angles to rotate the markers."
+        ]
+      },
+      {
+        "name": "fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha values for the markers."
+        ]
+      },
+      {
+        "name": "fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color values for the markers."
+        ]
+      },
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the markers."
+        ]
+      },
+      {
+        "name": "line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the markers."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the markers."
+        ]
+      },
+      {
+        "name": "line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the markers."
+        ]
+      },
+      {
+        "name": "line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the markers."
+        ]
+      },
+      {
+        "name": "line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the markers."
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the markers."
+        ]
+      },
+      {
+        "name": "size",
+        "descs": [
+          "property type: ScreenDistanceSpec",
+          "The size (diameter) values for the markers in screen space units."
+        ]
+      },
+      {
+        "name": "x",
+        "descs": [
+          "property type: NumberSpec",
+          "The x-axis coordinates for the center of the markers."
+        ]
+      },
+      {
+        "name": "y",
+        "descs": [
+          "property type: NumberSpec",
+          "The y-axis coordinates for the center of the markers."
+        ]
+      }
+    ],
+    "json": ""
+  }
+]

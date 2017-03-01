@@ -1,0 +1,119 @@
+[
+  {
+    "name": "Box",
+    "text": [
+      "Bases: bokeh.models.layouts.LayoutDOM",
+      "Abstract base class for Row and Column. Do not use directly."
+    ],
+    "attrs": [
+      {
+        "name": "children",
+        "descs": [
+          "property type: List ( Instance ( LayoutDOM  ) )",
+          "The list of children, which can be other components including plots, rows, columns, and widgets."
+        ]
+      }
+    ],
+    "json": "{\n  \"children\": [],\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"5540bb07-1b72-4f87-9543-1af7a97f2635\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Column",
+    "text": [
+      "Bases: bokeh.models.layouts.Box",
+      "Lay out child components in a single vertical row.",
+      "Children can be specified as positional arguments, as a single argument\nthat is a sequence, or using the children keyword argument."
+    ],
+    "attrs": [],
+    "json": "{\n  \"children\": [],\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"4fbb82ca-69b4-4d5f-a959-8c96b909e0f0\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "LayoutDOM",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "An abstract base class for layout components. LayoutDOM is not\ngenerally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "css_classes",
+        "descs": [
+          "property type: Seq ( String  )",
+          "A list of css class names to add to this DOM element. Note: the class names are\nsimply added as-is, no other guarantees are provided."
+        ]
+      },
+      {
+        "name": "disabled",
+        "descs": [
+          "property type: Bool",
+          "Whether the widget will be disabled when rendered. If True,\nthe widget will be greyed-out, and not respond to UI events."
+        ]
+      },
+      {
+        "name": "height",
+        "descs": [
+          "property type: Int",
+          "An optional height for the component (in pixels)."
+        ]
+      },
+      {
+        "name": "sizing_mode",
+        "descs": [
+          "property type: Enum ( SizingMode  )",
+          "How the item being displayed should size itself. Possible values are\n\"fixed\", \"scale_width\", \"scale_height\", \"scale_both\", and\n\"stretch_both\".",
+          "\"stretch_both\" elements are completely responsive (independently in width and height) and\nwill resize to occupy all available space, even if this changes the aspect ratio of the element.\nThis is sometimes called outside-in, and is a typical behavior for desktop applications.",
+          "\"fixed\" elements are not responsive. They will retain their original width and height\nregardless of any subsequent browser window resize events.",
+          "\"scale_width\" elements will responsively resize to fit to the width available, while\nmaintaining the original aspect ratio. This is a typical behavior for modern websites. For a\nPlot, the aspect ratio plot_width/plot_height is maintained.",
+          "\"scale_height\" elements will responsively resize to fit to the height available, while\nmaintaining the original aspect ratio. For a Plot, the aspect ratio\nplot_width/plot_height is maintained. A plot with \"scale_height\" mode needs\nto be wrapped in a Row or Column to be responsive.",
+          "\"scale_both\" elements will responsively resize to fir both the width and height available,\nwhile maintaining the original aspect ratio."
+        ]
+      },
+      {
+        "name": "width",
+        "descs": [
+          "property type: Int",
+          "An optional width for the component (in pixels)."
+        ]
+      },
+      {
+        "name": "html",
+        "descs": []
+      }
+    ],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"373908d6-3b02-4dfd-a5e6-1e84d8a927fa\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Row",
+    "text": [
+      "Bases: bokeh.models.layouts.Box",
+      "Lay out child components in a single horizontal row.",
+      "Children can be specified as positional arguments, as a single argument\nthat is a sequence, or using the children keyword argument."
+    ],
+    "attrs": [],
+    "json": "{\n  \"children\": [],\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"8c606d43-cdd6-4d50-97bf-68cd6872a98c\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Spacer",
+    "text": [
+      "Bases: bokeh.models.layouts.LayoutDOM",
+      "A container for space used to fill an empty spot in a row or column."
+    ],
+    "attrs": [],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"b3fa1f6c-e042-4dde-ac34-e4512e52133e\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "WidgetBox",
+    "text": [
+      "Bases: bokeh.models.layouts.LayoutDOM",
+      "A container for widgets that are part of a layout."
+    ],
+    "attrs": [
+      {
+        "name": "children",
+        "descs": [
+          "property type: List ( Instance ( Widget  ) )",
+          "The list of widgets to put in the layout box."
+        ]
+      }
+    ],
+    "json": "{\n  \"children\": [],\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"226037a0-0a49-4a08-9e72-94c2c17831e2\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  }
+]

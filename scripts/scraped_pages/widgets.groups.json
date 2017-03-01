@@ -1,0 +1,120 @@
+[
+  {
+    "name": "AbstractGroup",
+    "text": [
+      "Bases: bokeh.models.widgets.widget.Widget",
+      "Abstract base class for all kinds of groups. AbstractGroup\nis not generally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever a button group is manipulated."
+        ]
+      },
+      {
+        "name": "labels",
+        "descs": [
+          "property type: List ( String  )",
+          "List of text labels contained in this group."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"0697d411-1bf2-4fdc-aa42-0fd9e47a0488\",\n  \"js_callbacks\": {},\n  \"labels\": [],\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "ButtonGroup",
+    "text": [
+      "Bases: bokeh.models.widgets.groups.AbstractGroup, bokeh.models.widgets.buttons.ButtonLike",
+      "Abstract base class for groups with items rendered as buttons.\nButtonGroup is not generally useful to instantiate on its own."
+    ],
+    "attrs": [],
+    "json": "{\n  \"button_type\": \"default\",\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"feb2ca56-5433-4db4-a5d3-97ecc366a7ce\",\n  \"js_callbacks\": {},\n  \"labels\": [],\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "CheckboxButtonGroup",
+    "text": [
+      "Bases: bokeh.models.widgets.groups.ButtonGroup",
+      "A group of check boxes rendered as toggle buttons."
+    ],
+    "attrs": [
+      {
+        "name": "active",
+        "descs": [
+          "property type: List ( Int  )",
+          "The list of indices of selected check boxes."
+        ]
+      }
+    ],
+    "json": "{\n  \"active\": [],\n  \"button_type\": \"default\",\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"11400d2d-373c-4f39-9f25-eee845e8bc53\",\n  \"js_callbacks\": {},\n  \"labels\": [],\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "CheckboxGroup",
+    "text": [
+      "Bases: bokeh.models.widgets.groups.Group",
+      "A group of check boxes."
+    ],
+    "attrs": [
+      {
+        "name": "active",
+        "descs": [
+          "property type: List ( Int  )",
+          "The list of indices of selected check boxes."
+        ]
+      }
+    ],
+    "json": "{\n  \"active\": [],\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"0bb5b4d2-bb90-48b0-8b32-735eadc6a883\",\n  \"inline\": false,\n  \"js_callbacks\": {},\n  \"labels\": [],\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Group",
+    "text": [
+      "Bases: bokeh.models.widgets.groups.AbstractGroup",
+      "Abstract base class for groups with items rendered as check/radio\nboxes."
+    ],
+    "attrs": [
+      {
+        "name": "inline",
+        "descs": [
+          "property type: Bool",
+          "Should items be arrange vertically (False) or horizontally\nin-line (True)."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"c12cae24-0fbc-4108-af5c-620342bf9dd4\",\n  \"inline\": false,\n  \"js_callbacks\": {},\n  \"labels\": [],\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "RadioButtonGroup",
+    "text": [
+      "Bases: bokeh.models.widgets.groups.ButtonGroup",
+      "A group of radio boxes rendered as toggle buttons."
+    ],
+    "attrs": [
+      {
+        "name": "active",
+        "descs": [
+          "property type: Int",
+          "The index of the selected radio box, or None if nothing is\nselected."
+        ]
+      }
+    ],
+    "json": "{\n  \"active\": null,\n  \"button_type\": \"default\",\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"bf760bb0-cba1-4256-83ee-ee20b7eca46b\",\n  \"js_callbacks\": {},\n  \"labels\": [],\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "RadioGroup",
+    "text": [
+      "Bases: bokeh.models.widgets.groups.Group",
+      "A group of radio boxes."
+    ],
+    "attrs": [
+      {
+        "name": "active",
+        "descs": [
+          "property type: Int",
+          "The index of the selected radio box, or None if nothing is\nselected."
+        ]
+      }
+    ],
+    "json": "{\n  \"active\": null,\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"fbb6ba1a-5ca5-43b2-923b-d6fc2f8e63ae\",\n  \"inline\": false,\n  \"js_callbacks\": {},\n  \"labels\": [],\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  }
+]

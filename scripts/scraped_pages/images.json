@@ -1,0 +1,26 @@
+[
+  {
+    "name": "ImageSource",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "A base class for all image source types."
+    ],
+    "attrs": [
+      {
+        "name": "extra_url_vars",
+        "descs": [
+          "property type: Dict ( String , Any  )",
+          "A dictionary that maps url variable template keys to values.\nThese variables are useful for parts of tile urls which do not change from tile to tile (e.g. server host name, or layer name)."
+        ]
+      },
+      {
+        "name": "url",
+        "descs": [
+          "property type: String",
+          "tile service url (example: http://c.tile.openstreetmap.org/{Z}/{X}/{Y}.png)"
+        ]
+      }
+    ],
+    "json": "{\n  \"extra_url_vars\": {},\n  \"id\": \"2cc4be76-fe50-449c-9bb2-14488f01e265\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": [],\n  \"url\": \"\"\n}\n\n\n  "
+  }
+]

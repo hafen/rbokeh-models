@@ -1,0 +1,159 @@
+[
+  {
+    "name": "Grid",
+    "text": [
+      "Bases: bokeh.models.renderers.GuideRenderer",
+      "Display horizontal or vertical grid lines at locations\ngiven by a supplied Ticker."
+    ],
+    "attrs": [
+      {
+        "name": "band_fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha of alternating bands between Grid lines."
+        ]
+      },
+      {
+        "name": "band_fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color of alternating bands between Grid lines."
+        ]
+      },
+      {
+        "name": "bounds",
+        "descs": [
+          "property type: Either ( Auto , Tuple ( Float , Float  ) )",
+          "Bounds for the rendered grid lines. If unset, the grid\nlines will span the entire plot in the given dimension."
+        ]
+      },
+      {
+        "name": "dimension",
+        "descs": [
+          "property type: Int",
+          "Which dimension the Axis Grid lines will intersect. The\nx-axis is dimension 0 (vertical Grid lines) and the y-axis\nis dimension 1 (horizontal Grid lines)."
+        ]
+      },
+      {
+        "name": "grid_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha of the Grid lines."
+        ]
+      },
+      {
+        "name": "grid_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap of the Grid lines."
+        ]
+      },
+      {
+        "name": "grid_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color of the Grid lines."
+        ]
+      },
+      {
+        "name": "grid_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash of the Grid lines."
+        ]
+      },
+      {
+        "name": "grid_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset of the Grid lines."
+        ]
+      },
+      {
+        "name": "grid_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join of the Grid lines."
+        ]
+      },
+      {
+        "name": "grid_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width of the Grid lines."
+        ]
+      },
+      {
+        "name": "minor_grid_line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha of the minor Grid lines."
+        ]
+      },
+      {
+        "name": "minor_grid_line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap of the minor Grid lines."
+        ]
+      },
+      {
+        "name": "minor_grid_line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color of the minor Grid lines."
+        ]
+      },
+      {
+        "name": "minor_grid_line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash of the minor Grid lines."
+        ]
+      },
+      {
+        "name": "minor_grid_line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset of the minor Grid lines."
+        ]
+      },
+      {
+        "name": "minor_grid_line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join of the minor Grid lines."
+        ]
+      },
+      {
+        "name": "minor_grid_line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width of the minor Grid lines."
+        ]
+      },
+      {
+        "name": "ticker",
+        "descs": [
+          "property type: Instance ( Ticker  )",
+          "The Ticker to use for computing locations for the Grid lines."
+        ]
+      },
+      {
+        "name": "x_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) x-range to use for computing screen\nlocations when rendering a grid on the plot. If unset, use the\ndefault x-range."
+        ]
+      },
+      {
+        "name": "y_range_name",
+        "descs": [
+          "property type: String",
+          "A particular (named) y-range to use for computing screen\nlocations when rendering a grid on the plot. If unset, use the\ndefault y-range."
+        ]
+      }
+    ],
+    "json": "{\n  \"band_fill_alpha\": {\n    \"value\": 0\n  },\n  \"band_fill_color\": {\n    \"value\": null\n  },\n  \"bounds\": \"auto\",\n  \"dimension\": 0,\n  \"grid_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"grid_line_cap\": \"butt\",\n  \"grid_line_color\": {\n    \"value\": \"#e5e5e5\"\n  },\n  \"grid_line_dash\": [],\n  \"grid_line_dash_offset\": 0,\n  \"grid_line_join\": \"miter\",\n  \"grid_line_width\": {\n    \"value\": 1\n  },\n  \"id\": \"f2f96c83-2f26-479f-b3c3-5d6b8e6c0066\",\n  \"js_callbacks\": {},\n  \"level\": \"underlay\",\n  \"minor_grid_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"minor_grid_line_cap\": \"butt\",\n  \"minor_grid_line_color\": {\n    \"value\": null\n  },\n  \"minor_grid_line_dash\": [],\n  \"minor_grid_line_dash_offset\": 0,\n  \"minor_grid_line_join\": \"miter\",\n  \"minor_grid_line_width\": {\n    \"value\": 1\n  },\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": [],\n  \"ticker\": null,\n  \"visible\": true,\n  \"x_range_name\": \"default\",\n  \"y_range_name\": \"default\"\n}\n\n\n  "
+  }
+]

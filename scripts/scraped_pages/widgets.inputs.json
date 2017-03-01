@@ -1,0 +1,381 @@
+[
+  {
+    "name": "AutocompleteInput",
+    "text": [
+      "Bases: bokeh.models.widgets.inputs.TextInput",
+      "Single-line input widget with auto-completion."
+    ],
+    "attrs": [
+      {
+        "name": "completions",
+        "descs": [
+          "property type: List ( String  )",
+          "A list of completion strings. This will be used to guide the\nuser upon typing the beginning of a desired value."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"completions\": [],\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"c934b7ba-d653-4168-949d-49c55aff1f2d\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"placeholder\": \"\",\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": \"\",\n  \"value\": \"\",\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "DatePicker",
+    "text": [
+      "Bases: bokeh.models.widgets.inputs.InputWidget",
+      "Calendar-based date picker widget."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the current date value changes."
+        ]
+      },
+      {
+        "name": "max_date",
+        "descs": [
+          "property type: Date",
+          "Optional latest allowable date."
+        ]
+      },
+      {
+        "name": "min_date",
+        "descs": [
+          "property type: Date",
+          "Optional earliest allowable date."
+        ]
+      },
+      {
+        "name": "value",
+        "descs": [
+          "property type: Date",
+          "The initial or picked date."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"f0d3f111-15c8-4639-a637-cf3300014238\",\n  \"js_callbacks\": {},\n  \"max_date\": null,\n  \"min_date\": null,\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": \"\",\n  \"value\": 1483920000000.0,\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "DateRangeSlider",
+    "text": [
+      "Bases: bokeh.models.widgets.inputs.InputWidget",
+      "Slider-based date range selection widget."
+    ],
+    "attrs": [
+      {
+        "name": "arrows",
+        "descs": [
+          "property type: Bool",
+          "Whether to show clickable arrows on both ends of the slider."
+        ]
+      },
+      {
+        "name": "bounds",
+        "descs": [
+          "property type: Tuple ( Date , Date  )",
+          "The earliest and latest allowable dates."
+        ]
+      },
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever either slider’s value changes."
+        ]
+      },
+      {
+        "name": "enabled",
+        "descs": [
+          "property type: Bool",
+          "Enable or disable this widget."
+        ]
+      },
+      {
+        "name": "range",
+        "descs": [
+          "property type: Tuple ( RelativeDelta ( Enum ( Enumeration(years, months, days, hours, minutes, seconds, microseconds) ), Int  ), RelativeDelta ( Enum ( Enumeration(years, months, days, hours, minutes, seconds, microseconds) ), Int  ) )",
+          "[TDB]"
+        ]
+      },
+      {
+        "name": "step",
+        "descs": [
+          "property type: RelativeDelta ( Enum ( Enumeration(years, months, days, hours, minutes, seconds, microseconds) ), Int  )",
+          "The step between consecutive dates."
+        ]
+      },
+      {
+        "name": "value",
+        "descs": [
+          "property type: Tuple ( Date , Date  )",
+          "The initial or selected date range."
+        ]
+      },
+      {
+        "name": "value_labels",
+        "descs": [
+          "property type: Enum ( Enumeration(show, hide, change) )",
+          "Show or hide value labels on both sides of the slider."
+        ]
+      },
+      {
+        "name": "wheel_mode",
+        "descs": [
+          "property type: Enum ( Enumeration(scroll, zoom) )",
+          "Whether mouse zoom should scroll or zoom selected range (or\ndo nothing)."
+        ]
+      }
+    ],
+    "json": "{\n  \"arrows\": true,\n  \"bounds\": null,\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"enabled\": true,\n  \"height\": null,\n  \"id\": \"0fcf6d2e-5564-4668-98ae-08e274c9b36b\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"range\": null,\n  \"sizing_mode\": \"fixed\",\n  \"step\": {},\n  \"tags\": [],\n  \"title\": \"\",\n  \"value\": null,\n  \"value_labels\": \"show\",\n  \"wheel_mode\": null,\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "InputWidget",
+    "text": [
+      "Bases: bokeh.models.widgets.widget.Widget",
+      "Abstract base class for input widgets. InputWidget` is not\ngenerally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "title",
+        "descs": [
+          "property type: String",
+          "Widget’s label."
+        ]
+      }
+    ],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"a658348e-4af6-4595-ac80-d8221fab7235\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": \"\",\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "MultiSelect",
+    "text": [
+      "Bases: bokeh.models.widgets.inputs.InputWidget",
+      "Multi-select widget."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the current selection value\nchanges."
+        ]
+      },
+      {
+        "name": "options",
+        "descs": [
+          "property type: List ( Either ( String , Tuple ( String , String  ) ) )",
+          "Available selection options. Options may be provided either as a list of\npossible string values, or as a list of tuples, each of the form\n(value, label). In the latter case, the visible widget text for each\nvalue will be corresponding given label."
+        ]
+      },
+      {
+        "name": "size",
+        "descs": [
+          "property type: Int",
+          "The number of visible options in the dropdown list. (This uses the\nselect HTML element’s size attribute. Some browsers might not\nshow less than 3 options.)"
+        ]
+      },
+      {
+        "name": "value",
+        "descs": [
+          "property type: List ( String  )",
+          "Initial or selected values."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"7e5e5bf6-4ed0-4fc2-bb3b-43c998b01b74\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"options\": [],\n  \"size\": 4,\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": \"\",\n  \"value\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "RangeSlider",
+    "text": [
+      "Bases: bokeh.models.widgets.inputs.InputWidget",
+      "Range-slider based range selection widget"
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the current Slider value changes."
+        ]
+      },
+      {
+        "name": "callback_policy",
+        "descs": [
+          "property type: Enum ( SliderCallbackPolicy  )",
+          "When the callback is initiated. This parameter can take on only one of three options:",
+          "The “mouseup” policy is intended for scenarios in which the callback is expensive in time."
+        ]
+      },
+      {
+        "name": "callback_throttle",
+        "descs": [
+          "property type: Float",
+          "Number of microseconds to pause between callback calls as the slider is moved."
+        ]
+      },
+      {
+        "name": "end",
+        "descs": [
+          "property type: Float",
+          "The maximum allowable value."
+        ]
+      },
+      {
+        "name": "orientation",
+        "descs": [
+          "property type: Enum ( Enumeration(horizontal, vertical) )",
+          "Orient the slider either horizontally (default) or vertically."
+        ]
+      },
+      {
+        "name": "range",
+        "descs": [
+          "property type: Tuple ( Float , Float  )",
+          "Initial or selected range."
+        ]
+      },
+      {
+        "name": "start",
+        "descs": [
+          "property type: Float",
+          "The minimum allowable value."
+        ]
+      },
+      {
+        "name": "step",
+        "descs": [
+          "property type: Float",
+          "The step between consecutive values."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"callback_policy\": \"throttle\",\n  \"callback_throttle\": 200,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"end\": 1,\n  \"height\": null,\n  \"id\": \"33615095-aead-4502-8648-a3aeeb63fa67\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"orientation\": \"horizontal\",\n  \"range\": [\n    0.1,\n    0.9\n  ],\n  \"sizing_mode\": \"fixed\",\n  \"start\": 0,\n  \"step\": 0.1,\n  \"tags\": [],\n  \"title\": \"\",\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Select",
+    "text": [
+      "Bases: bokeh.models.widgets.inputs.InputWidget",
+      "Single-select widget."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the current Select dropdown\nvalue changes."
+        ]
+      },
+      {
+        "name": "options",
+        "descs": [
+          "property type: List ( Either ( String , Tuple ( String , String  ) ) )",
+          "Available selection options. Options may be provided either as a list of\npossible string values, or as a list of tuples, each of the form\n(value, label). In the latter case, the visible widget text for each\nvalue will be corresponding given label."
+        ]
+      },
+      {
+        "name": "value",
+        "descs": [
+          "property type: String",
+          "Initial or selected value."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"9f413e37-eef8-4645-b770-2203f15eae5f\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"options\": [],\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": \"\",\n  \"value\": \"\",\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "Slider",
+    "text": [
+      "Bases: bokeh.models.widgets.inputs.InputWidget",
+      "Slider-based number selection widget."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the current Slider value changes."
+        ]
+      },
+      {
+        "name": "callback_policy",
+        "descs": [
+          "property type: Enum ( SliderCallbackPolicy  )",
+          "When the callback is initiated. This parameter can take on only one of three options:",
+          "The “mouseup” policy is intended for scenarios in which the callback is expensive in time."
+        ]
+      },
+      {
+        "name": "callback_throttle",
+        "descs": [
+          "property type: Float",
+          "Number of microseconds to pause between callback calls as the slider is moved."
+        ]
+      },
+      {
+        "name": "end",
+        "descs": [
+          "property type: Float",
+          "The maximum allowable value."
+        ]
+      },
+      {
+        "name": "orientation",
+        "descs": [
+          "property type: Enum ( Enumeration(horizontal, vertical) )",
+          "Orient the slider either horizontally (default) or vertically."
+        ]
+      },
+      {
+        "name": "start",
+        "descs": [
+          "property type: Float",
+          "The minimum allowable value."
+        ]
+      },
+      {
+        "name": "step",
+        "descs": [
+          "property type: Float",
+          "The step between consecutive values."
+        ]
+      },
+      {
+        "name": "value",
+        "descs": [
+          "property type: Float",
+          "Initial or selected value."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"callback_policy\": \"throttle\",\n  \"callback_throttle\": 200,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"end\": 1,\n  \"height\": null,\n  \"id\": \"1bcbd64c-ef7d-436b-b23f-84373761eee5\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"orientation\": \"horizontal\",\n  \"sizing_mode\": \"fixed\",\n  \"start\": 0,\n  \"step\": 0.1,\n  \"tags\": [],\n  \"title\": \"\",\n  \"value\": 0.5,\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "TextInput",
+    "text": [
+      "Bases: bokeh.models.widgets.inputs.InputWidget",
+      "Single-line input widget."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the user unfocuses the TextInput\nwidget by hitting Enter or clicking outside of the text box area."
+        ]
+      },
+      {
+        "name": "placeholder",
+        "descs": [
+          "property type: String",
+          "Placeholder for empty input field"
+        ]
+      },
+      {
+        "name": "value",
+        "descs": [
+          "property type: String",
+          "Initial or entered text value."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"322d7f19-3f14-4d44-bc36-337d9edd48ce\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"placeholder\": \"\",\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": \"\",\n  \"value\": \"\",\n  \"width\": null\n}\n\n\n  "
+  }
+]

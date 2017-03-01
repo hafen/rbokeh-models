@@ -1,0 +1,205 @@
+[
+  {
+    "name": "AdaptiveTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.ContinuousTicker",
+      "Generate “nice” round ticks at any magnitude.",
+      "Creates ticks that are “base” multiples of a set of given\nmantissas. For example, with base=10 and\nmantissas=[1, 2, 5], the ticker will generate the sequence:"
+    ],
+    "attrs": [
+      {
+        "name": "base",
+        "descs": [
+          "property type: Float",
+          "The multiplier to use for scaling mantissas."
+        ]
+      },
+      {
+        "name": "mantissas",
+        "descs": [
+          "property type: Seq ( Float  )",
+          "The acceptable list numbers to generate multiples of."
+        ]
+      },
+      {
+        "name": "max_interval",
+        "descs": [
+          "property type: Float",
+          "The largest allowable interval between two adjacent ticks."
+        ]
+      },
+      {
+        "name": "min_interval",
+        "descs": [
+          "property type: Float",
+          "The smallest allowable interval between two adjacent ticks."
+        ]
+      }
+    ],
+    "json": "{\n  \"base\": 10.0,\n  \"desired_num_ticks\": 6,\n  \"id\": \"e4f79663-72c1-43fd-81f7-17770e411eb0\",\n  \"js_callbacks\": {},\n  \"mantissas\": [\n    1,\n    2,\n    5\n  ],\n  \"max_interval\": null,\n  \"min_interval\": 0.0,\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "BasicTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.AdaptiveTicker",
+      "Generate ticks on a linear scale."
+    ],
+    "attrs": [],
+    "json": "{\n  \"base\": 10.0,\n  \"desired_num_ticks\": 6,\n  \"id\": \"e3b632c8-de4c-45cd-b088-c4201380ac0f\",\n  \"js_callbacks\": {},\n  \"mantissas\": [\n    1,\n    2,\n    5\n  ],\n  \"max_interval\": null,\n  \"min_interval\": 0.0,\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "CategoricalTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.Ticker",
+      "Generate ticks for categorical ranges."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"e290cb7e-986a-4835-b6f8-bf3e179b3237\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "CompositeTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.ContinuousTicker",
+      "Combine different tickers at different scales.",
+      "Uses the min_interval and max_interval interval attributes\nof the tickers to select the appropriate ticker at different\nscales."
+    ],
+    "attrs": [
+      {
+        "name": "tickers",
+        "descs": [
+          "property type: Seq ( Instance ( Ticker  ) )",
+          "A list of Ticker objects to combine at different scales in order\nto generate tick values. The supplied tickers should be in order.\nSpecifically, if S comes before T, then it should be the case that:"
+        ]
+      }
+    ],
+    "json": "{\n  \"desired_num_ticks\": 6,\n  \"id\": \"c68f8f81-9cb0-41fd-8460-cea111cfae51\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": [],\n  \"tickers\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ContinuousTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.Ticker",
+      "A base class for non-categorical ticker types. ContinuousTicker\nis not generally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "desired_num_ticks",
+        "descs": [
+          "property type: Int",
+          "A desired target number of major tick positions to generate across\nthe plot range."
+        ]
+      },
+      {
+        "name": "num_minor_ticks",
+        "descs": [
+          "property type: Int",
+          "The number of minor tick positions to generate between\nadjacent major tick values."
+        ]
+      }
+    ],
+    "json": "{\n  \"desired_num_ticks\": 6,\n  \"id\": \"04c33cb0-2cea-4849-8952-90b0fc1d522e\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "DatetimeTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.CompositeTicker",
+      "Generate nice ticks across different date and time scales."
+    ],
+    "attrs": [],
+    "json": "{\n  \"desired_num_ticks\": 6,\n  \"id\": \"e19b26f6-b745-4269-9ee5-eacebff5c298\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"num_minor_ticks\": 0,\n  \"tags\": [],\n  \"tickers\": [\n    {\n      \"id\": \"e13dfec1-f2a9-4766-bed3-4f0b3b29d7b7\",\n      \"type\": \"AdaptiveTicker\"\n    },\n    {\n      \"id\": \"d3fc30f9-203e-479d-8882-155145484a09\",\n      \"type\": \"AdaptiveTicker\"\n    },\n    {\n      \"id\": \"ebdd82f6-1de4-4c4f-b680-80720ab0926f\",\n      \"type\": \"AdaptiveTicker\"\n    },\n    {\n      \"id\": \"061c100e-4031-4f21-a593-7c2210d8df8f\",\n      \"type\": \"DaysTicker\"\n    },\n    {\n      \"id\": \"882670d8-d5f2-4642-b0d3-627a6585493a\",\n      \"type\": \"DaysTicker\"\n    },\n    {\n      \"id\": \"01ba8333-84c8-4729-b2fc-b572137306a5\",\n      \"type\": \"DaysTicker\"\n    },\n    {\n      \"id\": \"774f16b5-f36f-413a-8388-aa23daf2077c\",\n      \"type\": \"DaysTicker\"\n    },\n    {\n      \"id\": \"8d777901-3dc2-4f54-a77e-31b6760d52af\",\n      \"type\": \"MonthsTicker\"\n    },\n    {\n      \"id\": \"384e89e3-f76e-4a1c-9587-1fb448e16c25\",\n      \"type\": \"MonthsTicker\"\n    },\n    {\n      \"id\": \"c5bfee2f-168b-4a1f-aea9-b5dc57c93036\",\n      \"type\": \"MonthsTicker\"\n    },\n    {\n      \"id\": \"e147212e-957e-4e91-8dc1-e5b9f43cc44d\",\n      \"type\": \"MonthsTicker\"\n    },\n    {\n      \"id\": \"0c715e8a-0ff0-4a88-b6f8-cc1f37f7793b\",\n      \"type\": \"YearsTicker\"\n    }\n  ]\n}\n\n\n  "
+  },
+  {
+    "name": "DaysTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.SingleIntervalTicker",
+      "Generate ticks spaced apart by specific, even multiples of days."
+    ],
+    "attrs": [
+      {
+        "name": "days",
+        "descs": [
+          "property type: Seq ( Int  )",
+          "The intervals of days to use."
+        ]
+      }
+    ],
+    "json": "{\n  \"days\": [],\n  \"desired_num_ticks\": 6,\n  \"id\": \"e2f8f3a0-5f9c-47cd-be38-da207786698e\",\n  \"interval\": null,\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "FixedTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.ContinuousTicker",
+      "Generate ticks at fixed, explicitly supplied locations."
+    ],
+    "attrs": [
+      {
+        "name": "ticks",
+        "descs": [
+          "property type: Seq ( Float  )",
+          "List of tick locations."
+        ]
+      }
+    ],
+    "json": "{\n  \"desired_num_ticks\": 6,\n  \"id\": \"ea6ac89d-69fb-4ff7-ab80-2439b9ea5bb8\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": [],\n  \"ticks\": []\n}\n\n\n  "
+  },
+  {
+    "name": "LogTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.AdaptiveTicker",
+      "Generate ticks on a log scale."
+    ],
+    "attrs": [],
+    "json": "{\n  \"base\": 10.0,\n  \"desired_num_ticks\": 6,\n  \"id\": \"6e80afcc-b9ce-437b-a22e-be088395f01c\",\n  \"js_callbacks\": {},\n  \"mantissas\": [\n    1,\n    5\n  ],\n  \"max_interval\": null,\n  \"min_interval\": 0.0,\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "MonthsTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.SingleIntervalTicker",
+      "Generate ticks spaced apart by specific, even multiples of months."
+    ],
+    "attrs": [
+      {
+        "name": "months",
+        "descs": [
+          "property type: Seq ( Int  )",
+          "The intervals of months to use."
+        ]
+      }
+    ],
+    "json": "{\n  \"desired_num_ticks\": 6,\n  \"id\": \"584a55f6-7cab-4a7f-b9f7-754a9e4db8e1\",\n  \"interval\": null,\n  \"js_callbacks\": {},\n  \"months\": [],\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "SingleIntervalTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.ContinuousTicker",
+      "Generate evenly spaced ticks at a fixed interval regardless of\nscale."
+    ],
+    "attrs": [
+      {
+        "name": "interval",
+        "descs": [
+          "property type: Float",
+          "The interval between adjacent ticks."
+        ]
+      }
+    ],
+    "json": "{\n  \"desired_num_ticks\": 6,\n  \"id\": \"aca4753b-ad29-449f-a40b-01f2cd4d51ff\",\n  \"interval\": null,\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "Ticker",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "A base class for all ticker types. Ticker is not generally\nuseful to instantiate on its own."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"437fc766-782a-4592-a0d1-f96f3054eddc\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "YearsTicker",
+    "text": [
+      "Bases: bokeh.models.tickers.SingleIntervalTicker",
+      "Generate ticks spaced apart even numbers of years."
+    ],
+    "attrs": [],
+    "json": "{\n  \"desired_num_ticks\": 6,\n  \"id\": \"51e818e7-3f5a-48bd-8cca-fdd9168ea077\",\n  \"interval\": null,\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"num_minor_ticks\": 5,\n  \"tags\": []\n}\n\n\n  "
+  }
+]

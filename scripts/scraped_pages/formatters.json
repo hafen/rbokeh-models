@@ -1,0 +1,261 @@
+[
+  {
+    "name": "BasicTickFormatter",
+    "text": [
+      "Bases: bokeh.models.formatters.TickFormatter",
+      "Display tick values from continuous ranges as “basic numbers”,\nusing scientific notation when appropriate by default."
+    ],
+    "attrs": [
+      {
+        "name": "power_limit_high",
+        "descs": [
+          "property type: Int",
+          "Limit the use of scientific notation to when:"
+        ]
+      },
+      {
+        "name": "power_limit_low",
+        "descs": [
+          "property type: Int",
+          "Limit the use of scientific notation to when:"
+        ]
+      },
+      {
+        "name": "precision",
+        "descs": [
+          "property type: Either ( Auto , Int  )",
+          "How many digits of precision to display in tick labels."
+        ]
+      },
+      {
+        "name": "use_scientific",
+        "descs": [
+          "property type: Bool",
+          "Whether to ever display scientific notation. If True, then\nwhen to use scientific notation is controlled by power_limit_low\nand power_limit_high."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"7fee40a0-3f33-4222-b799-d7d2690f1f8b\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"power_limit_high\": 5,\n  \"power_limit_low\": -3,\n  \"precision\": \"auto\",\n  \"tags\": [],\n  \"use_scientific\": true\n}\n\n\n  "
+  },
+  {
+    "name": "CategoricalTickFormatter",
+    "text": [
+      "Bases: bokeh.models.formatters.TickFormatter",
+      "Display tick values from categorical ranges as string\nvalues."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"72f8ba24-3488-465c-b816-f1b707ba5d24\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "DatetimeTickFormatter",
+    "text": [
+      "Bases: bokeh.models.formatters.TickFormatter",
+      "A TickFormatter for displaying datetime values nicely across a\nrange of scales.",
+      "DatetimeTickFormatter has the following properties (listed together\nwith their default values) that can be used to control the formatting\nof axis ticks at different scales scales:",
+      "Each scale property can be set to format or list of formats to use for\nformatting datetime tick values that fall in in that “time scale”.\nBy default, only the first format string passed for each time scale\nwill be used. By default, all leading zeros are stripped away from\nthe formatted labels.",
+      "This list of supported strftime formats is reproduced below."
+    ],
+    "attrs": [
+      {
+        "name": "days",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the days range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "hourmin",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the hourmin (for combined hours and minutes) range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "hours",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the hours range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "microseconds",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the microseconds range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "milliseconds",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the milliseconds range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "minsec",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the minsec (for combined minutes and seconds) range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "minutes",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the minutes range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "months",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the months range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "seconds",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the seconds range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "years",
+        "descs": [
+          "property type: List ( String  )",
+          "Formats for displaying datetime values in the years range.",
+          "See the DatetimeTickFormatter help for a list of all supported formats."
+        ]
+      },
+      {
+        "name": "formats",
+        "descs": [
+          "A dictionary containing formats for all scales.",
+          "THIS PROPERTY IS DEPRECTATED. Use individual DatetimeTickFormatter fields instead."
+        ]
+      }
+    ],
+    "json": "{\n  \"days\": [\n    \"%m/%d\",\n    \"%a%d\"\n  ],\n  \"hourmin\": [\n    \"%H:%M\"\n  ],\n  \"hours\": [\n    \"%Hh\",\n    \"%H:%M\"\n  ],\n  \"id\": \"350f9ad7-3f5a-4f69-b2b2-b3cd0f067bda\",\n  \"js_callbacks\": {},\n  \"microseconds\": [\n    \"%fus\"\n  ],\n  \"milliseconds\": [\n    \"%3Nms\",\n    \"%S.%3Ns\"\n  ],\n  \"minsec\": [\n    \":%M:%S\"\n  ],\n  \"minutes\": [\n    \":%M\",\n    \"%Mm\"\n  ],\n  \"months\": [\n    \"%m/%Y\",\n    \"%b%y\"\n  ],\n  \"name\": null,\n  \"seconds\": [\n    \"%Ss\"\n  ],\n  \"tags\": [],\n  \"years\": [\n    \"%Y\"\n  ]\n}\n\n\n  "
+  },
+  {
+    "name": "FuncTickFormatter",
+    "text": [
+      "Bases: bokeh.models.formatters.TickFormatter",
+      "Display tick values that are formatted by a user-defined function."
+    ],
+    "attrs": [
+      {
+        "name": "args",
+        "descs": [
+          "property type: Dict ( String , Instance ( Model  ) )",
+          "A mapping of names to Bokeh plot objects. These objects are made\navailable to the formatter code snippet as the values of named\nparameters to the callback."
+        ]
+      },
+      {
+        "name": "code",
+        "descs": [
+          "property type: String",
+          "A snippet of JavaScript code that reformats a single tick to the desired\nformat. The variable tick will contain the unformatted tick value and\ncan be expected to be present in the code snippet namespace at render time.",
+          "Example:"
+        ]
+      }
+    ],
+    "json": "{\n  \"args\": {},\n  \"code\": \"\",\n  \"id\": \"162bd24c-19d4-4c95-a337-26fe37264a70\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "LogTickFormatter",
+    "text": [
+      "Bases: bokeh.models.formatters.TickFormatter",
+      "Display tick values from continuous ranges as powers\nof some base.",
+      "Most often useful in conjunction with a LogTicker."
+    ],
+    "attrs": [
+      {
+        "name": "ticker",
+        "descs": [
+          "property type: Instance ( Ticker  )",
+          "The corresponding LogTicker, used to determine the correct\nbase to use. If unset, the formatter will use base 10 as a default."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"da54ffc9-5789-4805-a9d7-cf3cbb1fc126\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": [],\n  \"ticker\": null\n}\n\n\n  "
+  },
+  {
+    "name": "NumeralTickFormatter",
+    "text": [
+      "Bases: bokeh.models.formatters.TickFormatter",
+      "Tick formatter based on a human-readable format string."
+    ],
+    "attrs": [
+      {
+        "name": "format",
+        "descs": [
+          "property type: String",
+          "The number format, as defined in the following tables:",
+          "NUMBERS:",
+          "CURRENCY:",
+          "BYTES:",
+          "PERCENTAGES:",
+          "TIME:",
+          "For the complete specification, see http://numbrojs.com/format.html"
+        ]
+      },
+      {
+        "name": "language",
+        "descs": [
+          "property type: Enum ( NumeralLanguage  )",
+          "The language to use for formatting language-specific features (e.g. thousands separator)."
+        ]
+      },
+      {
+        "name": "rounding",
+        "descs": [
+          "property type: Enum ( RoundingFunction  )",
+          "Rounding functions (round, floor, ceil) and their synonyms (nearest, rounddown, roundup)."
+        ]
+      }
+    ],
+    "json": "{\n  \"format\": \"0,0\",\n  \"id\": \"0310fd04-4eff-4a31-bc51-2a9b87534e9b\",\n  \"js_callbacks\": {},\n  \"language\": \"en\",\n  \"name\": null,\n  \"rounding\": \"round\",\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "PrintfTickFormatter",
+    "text": [
+      "Bases: bokeh.models.formatters.TickFormatter",
+      "Tick formatter based on a printf-style format string."
+    ],
+    "attrs": [
+      {
+        "name": "format",
+        "descs": [
+          "property type: String",
+          "The number format, as defined as follows: the placeholder in the format\nstring is marked by % and is followed by one or more of these elements,\nin this order:",
+          "Causes the result to be preceded with a plus or minus sign on numeric\nvalues. By default, only the - sign is used on negative numbers.",
+          "Specifies what (if any) character to use for padding. Possible values\nare 0 or any other character preceded by a ' (single quote). The\ndefault is to pad with spaces.",
+          "Causes sprintf to left-align the result of this placeholder. The default\nis to right-align the result.",
+          "Specifies how many characters the result should have. If the value to be\nreturned is shorter than this number, the result will be padded.",
+          "Consists of a . (dot) followed by a number, specifies how many digits\nshould be displayed for floating point numbers. When used on a string, it\ncauses the result to be truncated.",
+          "Can be any of:"
+        ]
+      }
+    ],
+    "json": "{\n  \"format\": \"%s\",\n  \"id\": \"9d8aeec6-35a0-49ee-94c5-09df1701db87\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "TickFormatter",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "A base class for all tick formatter types. TickFormatter is\nnot generally useful to instantiate on its own."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"6d53d7f7-f1ad-4da1-9ddd-5a25cca1ac77\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  }
+]

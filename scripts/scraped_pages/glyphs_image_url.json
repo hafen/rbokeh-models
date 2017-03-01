@@ -1,0 +1,123 @@
+[
+  {
+    "name": "ImageURL",
+    "text": [
+      "Render images loaded from given URLs.",
+      "Example",
+      "source: tests/glyphs/ImageURL.py"
+    ],
+    "attrs": [
+      {
+        "name": "anchor",
+        "descs": [
+          "property type: Enum ( LegendLocation  )",
+          "What position of the image should be anchored at the x, y\ncoordinates."
+        ]
+      },
+      {
+        "name": "angle",
+        "descs": [
+          "property type: AngleSpec",
+          "The angles to rotate the images, as measured from the horizontal."
+        ]
+      },
+      {
+        "name": "dilate",
+        "descs": [
+          "property type: Bool",
+          "Whether to always round fractional pixel locations in such a way\nas to make the images bigger.",
+          "This setting may be useful if pixel rounding errors are causing\nimages to have a gap between them, when they should appear flush."
+        ]
+      },
+      {
+        "name": "global_alpha",
+        "descs": [
+          "property type: Float",
+          "An overall opacity that each image is rendered with (in addition\nto any inherent alpha values in the image itself)."
+        ]
+      },
+      {
+        "name": "h",
+        "descs": [
+          "property type: DistanceSpec",
+          "The height of the plot region that the image will occupy."
+        ]
+      },
+      {
+        "name": "js_callbacks",
+        "descs": [
+          "property type: Dict ( String , List ( Instance ( CustomJS  ) ) )",
+          "A mapping of attribute names to lists of CustomJS callbacks, to be set up on\nBokehJS side when the document is created.",
+          "Typically, rather then modifying this property directly, callbacks should be\nadded using the Model.js_on_change method:"
+        ]
+      },
+      {
+        "name": "name",
+        "descs": [
+          "property type: String",
+          "An arbitrary, user-supplied name for this model.",
+          "This name can be useful when querying the document to retrieve specific\nBokeh models."
+        ]
+      },
+      {
+        "name": "retry_attempts",
+        "descs": [
+          "property type: Int",
+          "Number of attempts to retry loading the images from the specified URL.\nDefault is zero."
+        ]
+      },
+      {
+        "name": "retry_timeout",
+        "descs": [
+          "property type: Int",
+          "Timeout (in ms) between retry attempts to load the image from the\nspecified URL. Default is zero ms."
+        ]
+      },
+      {
+        "name": "tags",
+        "descs": [
+          "property type: List ( Any  )",
+          "An optional list of arbitrary, user-supplied values to attach to this\nmodel.",
+          "This data can be useful when querying the document to retrieve specific\nBokeh models:",
+          "Or simply a convenient way to attach any necessary metadata to a model\nthat can be accessed by CustomJS callbacks, etc."
+        ]
+      },
+      {
+        "name": "url",
+        "descs": [
+          "property type: NumberSpec",
+          "The URLs to retrieve images from."
+        ]
+      },
+      {
+        "name": "visible",
+        "descs": [
+          "property type: Bool",
+          "Whether the glyph should render or not."
+        ]
+      },
+      {
+        "name": "w",
+        "descs": [
+          "property type: DistanceSpec",
+          "The widths of the plot regions that the images will occupy."
+        ]
+      },
+      {
+        "name": "x",
+        "descs": [
+          "property type: NumberSpec",
+          "The x-coordinates to locate the image anchors."
+        ]
+      },
+      {
+        "name": "y",
+        "descs": [
+          "property type: NumberSpec",
+          "The y-coordinates to locate the image anchors."
+        ]
+      }
+    ],
+    "json": ""
+  }
+]

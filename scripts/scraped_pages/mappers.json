@@ -1,0 +1,102 @@
+[
+  {
+    "name": "CategoricalColorMapper",
+    "text": [
+      "Bases: bokeh.models.mappers.ColorMapper",
+      "Map categories to colors. Values that are passed to\nthis mapper that aren’t in factors will be assigned the nan_color."
+    ],
+    "attrs": [
+      {
+        "name": "factors",
+        "descs": [
+          "property type: Either ( Seq ( String  ), Seq ( Int  ), Seq ( Float  ), Seq ( Datetime  ), Seq ( Date  ) )",
+          "A sequence of factors / categories that map to the color palette."
+        ]
+      }
+    ],
+    "json": "{\n  \"factors\": null,\n  \"id\": \"38ce2421-0e1d-461a-ad82-a4ff1212504a\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"nan_color\": \"gray\",\n  \"palette\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ColorMapper",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "Base class for color mapper types. ColorMapper is not\ngenerally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "nan_color",
+        "descs": [
+          "property type: Color",
+          "Color to be used if data is NaN. Default: ‘gray’"
+        ]
+      },
+      {
+        "name": "palette",
+        "descs": [
+          "property type: Seq ( Color  )",
+          "A sequence of colors to use as the target palette for mapping.",
+          "This property can also be set as a String, to the name of\nany of the palettes shown in bokeh.palettes."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"09c00c86-0f01-4b0c-aee2-17560cfdbbd1\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"nan_color\": \"gray\",\n  \"palette\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "ContinuousColorMapper",
+    "text": [
+      "Bases: bokeh.models.mappers.ColorMapper",
+      "Base class for cotinuous color mapper types. ContinuousColorMapper is not\ngenerally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "high",
+        "descs": [
+          "property type: Float",
+          "The maximum value of the range to map into the palette. Values above\nthis are clamped to high."
+        ]
+      },
+      {
+        "name": "high_color",
+        "descs": [
+          "property type: Color",
+          "Color to be used if data is lower than high value. If None,\nvalues lower than high are mapped to the last color in the palette."
+        ]
+      },
+      {
+        "name": "low",
+        "descs": [
+          "property type: Float",
+          "The minimum value of the range to map into the palette. Values below\nthis are clamped to low."
+        ]
+      },
+      {
+        "name": "low_color",
+        "descs": [
+          "property type: Color",
+          "Color to be used if data is lower than low value. If None,\nvalues lower than low are mapped to the first color in the palette."
+        ]
+      }
+    ],
+    "json": "{\n  \"high\": null,\n  \"high_color\": null,\n  \"id\": \"e8bc9930-0f03-4548-a05c-3d7277977b4e\",\n  \"js_callbacks\": {},\n  \"low\": null,\n  \"low_color\": null,\n  \"name\": null,\n  \"nan_color\": \"gray\",\n  \"palette\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "LinearColorMapper",
+    "text": [
+      "Bases: bokeh.models.mappers.ContinuousColorMapper",
+      "Map numbers in a range [low, high] linearly into a\nsequence of colors (a palette).",
+      "For example, if the range is [0, 99] and the palette is\n['red', 'green', 'blue'], the values would be mapped as\nfollows:"
+    ],
+    "attrs": [],
+    "json": "{\n  \"high\": null,\n  \"high_color\": null,\n  \"id\": \"1d1f13e6-d410-4875-95bb-60538cf685ac\",\n  \"js_callbacks\": {},\n  \"low\": null,\n  \"low_color\": null,\n  \"name\": null,\n  \"nan_color\": \"gray\",\n  \"palette\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "LogColorMapper",
+    "text": [
+      "Bases: bokeh.models.mappers.ContinuousColorMapper",
+      "Map numbers in a range [low, high] into a\nsequence of colors (a palette) on a natural logarithm scale.",
+      "For example, if the range is [0, 25] and the palette is\n['red', 'green', 'blue'], the values would be mapped as\nfollows:"
+    ],
+    "attrs": [],
+    "json": "{\n  \"high\": null,\n  \"high_color\": null,\n  \"id\": \"d808fef7-b312-44e8-9c5d-8b354002c049\",\n  \"js_callbacks\": {},\n  \"low\": null,\n  \"low_color\": null,\n  \"name\": null,\n  \"nan_color\": \"gray\",\n  \"palette\": null,\n  \"tags\": []\n}\n\n\n  "
+  }
+]

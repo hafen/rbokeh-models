@@ -1,0 +1,390 @@
+[
+  {
+    "name": "BooleanFormatter",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellFormatter",
+      "Boolean (check mark) cell formatter."
+    ],
+    "attrs": [
+      {
+        "name": "icon",
+        "descs": [
+          "property type: Enum ( Enumeration(check, check-circle, check-circle-o, check-square, check-square-o) )",
+          "The icon visualizing the check mark."
+        ]
+      }
+    ],
+    "json": "{\n  \"icon\": \"check\",\n  \"id\": \"6e5dd9cd-8d42-4826-8ea8-303253744ef8\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "CellEditor",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "Abstract base class for data table’s cell editors."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"b1a4f8dd-ea92-4877-adf1-e165594a1f84\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "CellFormatter",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "Abstract base class for data table’s cell formatters."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"96363867-f742-44ce-8965-2af84f65a891\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "CheckboxEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "Boolean value cell editor."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"dbe2780a-97a1-4242-a553-60f345f40e9d\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "DataTable",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.TableWidget",
+      "Two dimensional grid for visualisation and editing large amounts\nof data."
+    ],
+    "attrs": [
+      {
+        "name": "columns",
+        "descs": [
+          "property type: List ( Instance ( TableColumn  ) )",
+          "The list of child column widgets."
+        ]
+      },
+      {
+        "name": "editable",
+        "descs": [
+          "property type: Bool",
+          "Allows to edit table’s contents. Needs cell editors to be configured on\ncolumns that are required to be editable."
+        ]
+      },
+      {
+        "name": "fit_columns",
+        "descs": [
+          "property type: Bool",
+          "Whether columns should be fit to the available width. This results in no\nhorizontal scrollbar showing up, but data can get unreadable if there is\nno enough space available. If set to True, columns’ width is\nunderstood as maximum width."
+        ]
+      },
+      {
+        "name": "row_headers",
+        "descs": [
+          "property type: Bool",
+          "Enable or disable row headers, i.e. the index column."
+        ]
+      },
+      {
+        "name": "scroll_to_selection",
+        "descs": [
+          "property type: Bool",
+          "Whenever a selection is made on the data source, scroll the selected\nrows into the table’s viewport if none of the selected rows are already\nin the viewport."
+        ]
+      },
+      {
+        "name": "selectable",
+        "descs": [
+          "property type: Either ( Bool , Enum ( Enumeration(checkbox) ) )",
+          "Whether a table’s rows can be selected or not. Using checkbox is\nequivalent  to True, but makes selection visible through a checkbox\nfor each row,  instead of highlighting rows. Multiple selection is\nallowed and can be achieved by either clicking multiple checkboxes (if\nenabled) or using Shift + click on rows."
+        ]
+      },
+      {
+        "name": "sortable",
+        "descs": [
+          "property type: Bool",
+          "Allows to sort table’s contents. By default natural order is preserved.\nTo sort a column, click on it’s header. Clicking one more time changes\nsort direction. Use Ctrl + click to return to natural order. Use\nShift + click to sort multiple columns simultaneously."
+        ]
+      }
+    ],
+    "json": "{\n  \"columns\": [],\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"editable\": false,\n  \"fit_columns\": true,\n  \"height\": 400,\n  \"id\": \"60a6f2f4-5ce8-43e2-a1b2-34f0b0526fdc\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"row_headers\": true,\n  \"scroll_to_selection\": true,\n  \"selectable\": true,\n  \"sizing_mode\": \"fixed\",\n  \"sortable\": true,\n  \"source\": null,\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "DateEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "Calendar-based date cell editor."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"885ab24e-390d-4be2-8b10-d05c01540e03\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "DateFormatter",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellFormatter",
+      "Date cell formatter."
+    ],
+    "attrs": [
+      {
+        "name": "format",
+        "descs": [
+          "property type: Either ( Enum ( DateFormat  ), String  )",
+          "The date format can be combinations of the following:"
+        ]
+      }
+    ],
+    "json": "{\n  \"format\": \"yy M d\",\n  \"id\": \"a9c8830f-4bc7-4119-a257-cace44788118\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "HTMLTemplateFormatter",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellFormatter",
+      "HTML formatter using a template.\nThis uses Underscore’s template method and syntax.  http://underscorejs.org/#template\nThe formatter has access other items in the row via the dataContext object passed to the formatter.\nSo, for example, if another column in the datasource was named url, the template could access it as:",
+      "To use a different set of template delimiters, pass the appropriate values for evaluate, interpolate’,\nor `escape.  See the Underscore template documentation for more information.  http://underscorejs.org/#template",
+      "Example: Simple HTML template to format the column value as code.",
+      "Example: Use values from other columns (manufacturer and model) to build a hyperlink."
+    ],
+    "attrs": [
+      {
+        "name": "template",
+        "descs": [
+          "property type: String",
+          "Template string to be used by Underscore’s template method."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"35c429d5-30e5-4bd7-838f-4b4490839c7b\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": [],\n  \"template\": \"<%= value %>\"\n}\n\n\n  "
+  },
+  {
+    "name": "IntEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "Spinner-based integer cell editor."
+    ],
+    "attrs": [
+      {
+        "name": "step",
+        "descs": [
+          "property type: Int",
+          "The major step value."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"74f4da94-7b81-47b4-b420-f878b9cace4c\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"step\": 1,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "NumberEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "Spinner-based number cell editor."
+    ],
+    "attrs": [
+      {
+        "name": "step",
+        "descs": [
+          "property type: Float",
+          "The major step value."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"fbccae89-ca6b-4215-aacf-48585ce22af6\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"step\": 0.01,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "NumberFormatter",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.StringFormatter",
+      "Number cell formatter."
+    ],
+    "attrs": [
+      {
+        "name": "format",
+        "descs": [
+          "property type: String",
+          "The number format, as defined in the following tables:",
+          "NUMBERS:",
+          "CURRENCY:",
+          "BYTES:",
+          "PERCENTAGES:",
+          "TIME:",
+          "For the complete specification, see http://numbrojs.com/format.html"
+        ]
+      },
+      {
+        "name": "language",
+        "descs": [
+          "property type: Enum ( NumeralLanguage  )",
+          "The language to use for formatting language-specific features (e.g. thousands separator)."
+        ]
+      },
+      {
+        "name": "rounding",
+        "descs": [
+          "property type: Enum ( RoundingFunction  )",
+          "Rounding functions (round, floor, ceil) and their synonyms (nearest, rounddown, roundup)."
+        ]
+      }
+    ],
+    "json": "{\n  \"font_style\": \"normal\",\n  \"format\": \"0,0\",\n  \"id\": \"bba2f690-8264-4898-ad52-fe1ae16ec932\",\n  \"js_callbacks\": {},\n  \"language\": \"en\",\n  \"name\": null,\n  \"rounding\": \"round\",\n  \"tags\": [],\n  \"text_align\": \"left\",\n  \"text_color\": null\n}\n\n\n  "
+  },
+  {
+    "name": "PercentEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "IntEditor optimized for editing percentages."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"c1e4453f-ce82-497b-b2fa-1022571d48ec\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "SelectEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "Select cell editor."
+    ],
+    "attrs": [
+      {
+        "name": "options",
+        "descs": [
+          "property type: List ( String  )",
+          "The list of options to select from."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"cef0097b-51de-4cd4-a48c-e5f6fec46fe9\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"options\": [],\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "StringEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "Basic string cell editor with auto-completion."
+    ],
+    "attrs": [
+      {
+        "name": "completions",
+        "descs": [
+          "property type: List ( String  )",
+          "An optional list of completion strings."
+        ]
+      }
+    ],
+    "json": "{\n  \"completions\": [],\n  \"id\": \"fb5adcf0-d0cf-4e40-a9d9-782465caa46e\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "StringFormatter",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellFormatter",
+      "Basic string cell formatter."
+    ],
+    "attrs": [
+      {
+        "name": "font_style",
+        "descs": [
+          "property type: Enum ( FontStyle  )",
+          "An optional text font style, e.g. bold, italic."
+        ]
+      },
+      {
+        "name": "text_align",
+        "descs": [
+          "property type: Enum ( TextAlign  )",
+          "An optional text align, i.e. left, center or right."
+        ]
+      },
+      {
+        "name": "text_color",
+        "descs": [
+          "property type: Color",
+          "An optional text color. See bokeh.core.properties.Color for\ndetails."
+        ]
+      }
+    ],
+    "json": "{\n  \"font_style\": \"normal\",\n  \"id\": \"98cb23a7-ea42-4e12-8c4c-51c1a6cb1c80\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": [],\n  \"text_align\": \"left\",\n  \"text_color\": null\n}\n\n\n  "
+  },
+  {
+    "name": "TableColumn",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "Table column widget."
+    ],
+    "attrs": [
+      {
+        "name": "default_sort",
+        "descs": [
+          "property type: Enum ( Enumeration(ascending, descending) )",
+          "The default sorting order. By default ascending order is used."
+        ]
+      },
+      {
+        "name": "editor",
+        "descs": [
+          "property type: Instance ( CellEditor  )",
+          "The cell editor for this column. By default, a simple string editor\nis used."
+        ]
+      },
+      {
+        "name": "field",
+        "descs": [
+          "property type: String",
+          "The name of the field mapping to a column in the data source."
+        ]
+      },
+      {
+        "name": "formatter",
+        "descs": [
+          "property type: Instance ( CellFormatter  )",
+          "The cell formatter for this column. By default, a simple string\nformatter is used."
+        ]
+      },
+      {
+        "name": "sortable",
+        "descs": [
+          "property type: Bool",
+          "Whether this column is sortable or not. Note that data table has\nto have sorting enabled to allow sorting in general."
+        ]
+      },
+      {
+        "name": "title",
+        "descs": [
+          "property type: String",
+          "The title of this column. If not set, column’s data field is\nused instead."
+        ]
+      },
+      {
+        "name": "width",
+        "descs": [
+          "property type: Int",
+          "The width or maximum width (depending on data table’s configuration)\nin pixels of this column."
+        ]
+      }
+    ],
+    "json": "{\n  \"default_sort\": \"ascending\",\n  \"editor\": {\n    \"id\": \"59f4b588-6a18-4ad8-b28e-c170d56b436c\",\n    \"type\": \"StringEditor\"\n  },\n  \"field\": null,\n  \"formatter\": {\n    \"id\": \"fe8693e4-3e72-4aa5-992d-47c9f2ccf265\",\n    \"type\": \"StringFormatter\"\n  },\n  \"id\": \"a9a64332-d20e-4a63-9b63-3bf65f62b07b\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sortable\": true,\n  \"tags\": [],\n  \"title\": null,\n  \"width\": 300\n}\n\n\n  "
+  },
+  {
+    "name": "TableWidget",
+    "text": [
+      "Bases: bokeh.models.widgets.widget.Widget",
+      "Abstract base class for data table (data grid) widgets."
+    ],
+    "attrs": [
+      {
+        "name": "source",
+        "descs": [
+          "property type: Instance ( DataSource  )",
+          "The source of data for the widget."
+        ]
+      }
+    ],
+    "json": "{\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"height\": null,\n  \"id\": \"04124627-d8dd-4dae-8eb6-160c8380c4c7\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"sizing_mode\": \"fixed\",\n  \"source\": null,\n  \"tags\": [],\n  \"width\": null\n}\n\n\n  "
+  },
+  {
+    "name": "TextEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "Multi-line string cell editor."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"9da763f2-0a01-4f30-b2a9-5aba014833fb\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "TimeEditor",
+    "text": [
+      "Bases: bokeh.models.widgets.tables.CellEditor",
+      "Spinner-based time cell editor."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"83a163f8-59a8-4c49-9b5e-cd4b0c1ccbd5\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  }
+]

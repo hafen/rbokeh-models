@@ -1,0 +1,237 @@
+[
+  {
+    "name": "ArrowHead",
+    "text": [
+      "Bases: bokeh.models.annotations.Annotation",
+      "Base class for arrow heads."
+    ],
+    "attrs": [],
+    "json": "{\n  \"id\": \"74165e32-ee85-45bf-b55d-3c472b665cce\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"name\": null,\n  \"plot\": null,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "NormalHead",
+    "text": [
+      "Bases: bokeh.models.arrow_heads.ArrowHead",
+      "Render a closed-body arrow head."
+    ],
+    "attrs": [
+      {
+        "name": "fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha values for the arrow head interior."
+        ]
+      },
+      {
+        "name": "fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color values for the arrow head interior."
+        ]
+      },
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "size",
+        "descs": [
+          "property type: Float",
+          "The size, in pixels, of the arrow head."
+        ]
+      }
+    ],
+    "json": "{\n  \"fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"fill_color\": {\n    \"value\": \"black\"\n  },\n  \"id\": \"e132c1d6-8487-4426-ab74-cc8387cf6c77\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"line_alpha\": {\n    \"value\": 1.0\n  },\n  \"line_cap\": \"butt\",\n  \"line_color\": {\n    \"value\": \"black\"\n  },\n  \"line_dash\": [],\n  \"line_dash_offset\": 0,\n  \"line_join\": \"miter\",\n  \"line_width\": {\n    \"value\": 1\n  },\n  \"name\": null,\n  \"plot\": null,\n  \"size\": 25,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "OpenHead",
+    "text": [
+      "Bases: bokeh.models.arrow_heads.ArrowHead",
+      "Render an open-body arrow head."
+    ],
+    "attrs": [
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "size",
+        "descs": [
+          "property type: Float",
+          "The size, in pixels, of the arrow head."
+        ]
+      }
+    ],
+    "json": "{\n  \"id\": \"0776f288-fb06-4541-b571-739774357902\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"line_alpha\": {\n    \"value\": 1.0\n  },\n  \"line_cap\": \"butt\",\n  \"line_color\": {\n    \"value\": \"black\"\n  },\n  \"line_dash\": [],\n  \"line_dash_offset\": 0,\n  \"line_join\": \"miter\",\n  \"line_width\": {\n    \"value\": 1\n  },\n  \"name\": null,\n  \"plot\": null,\n  \"size\": 25,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  },
+  {
+    "name": "VeeHead",
+    "text": [
+      "Bases: bokeh.models.arrow_heads.ArrowHead",
+      "Render an vee-style arrow head."
+    ],
+    "attrs": [
+      {
+        "name": "fill_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The fill alpha values for the arrow head interior."
+        ]
+      },
+      {
+        "name": "fill_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The fill color values for the arrow head interior."
+        ]
+      },
+      {
+        "name": "line_alpha",
+        "descs": [
+          "property type: NumberSpec",
+          "The line alpha values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_cap",
+        "descs": [
+          "property type: Enum ( LineCap  )",
+          "The line cap values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_color",
+        "descs": [
+          "property type: ColorSpec",
+          "The line color values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_dash",
+        "descs": [
+          "property type: DashPattern",
+          "The line dash values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_dash_offset",
+        "descs": [
+          "property type: Int",
+          "The line dash offset values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_join",
+        "descs": [
+          "property type: Enum ( LineJoin  )",
+          "The line join values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "line_width",
+        "descs": [
+          "property type: NumberSpec",
+          "The line width values for the arrow head outline."
+        ]
+      },
+      {
+        "name": "size",
+        "descs": [
+          "property type: Float",
+          "The size, in pixels, of the arrow head."
+        ]
+      }
+    ],
+    "json": "{\n  \"fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"fill_color\": {\n    \"value\": \"black\"\n  },\n  \"id\": \"26cc90ce-fb63-461c-9016-9e195f6a4965\",\n  \"js_callbacks\": {},\n  \"level\": \"annotation\",\n  \"line_alpha\": {\n    \"value\": 1.0\n  },\n  \"line_cap\": \"butt\",\n  \"line_color\": {\n    \"value\": \"black\"\n  },\n  \"line_dash\": [],\n  \"line_dash_offset\": 0,\n  \"line_join\": \"miter\",\n  \"line_width\": {\n    \"value\": 1\n  },\n  \"name\": null,\n  \"plot\": null,\n  \"size\": 25,\n  \"tags\": [],\n  \"visible\": true\n}\n\n\n  "
+  }
+]

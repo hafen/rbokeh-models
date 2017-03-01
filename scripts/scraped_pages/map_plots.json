@@ -1,0 +1,89 @@
+[
+  {
+    "name": "GMapOptions",
+    "text": [
+      "Options for GMapPlot objects."
+    ],
+    "attrs": [
+      {
+        "name": "map_type",
+        "descs": [
+          "property type: Enum ( MapType  )",
+          "The map type to use for the GMapPlot."
+        ]
+      },
+      {
+        "name": "styles",
+        "descs": [
+          "property type: JSON",
+          "A JSON array of map styles to use for the GMapPlot. Many example styles can\nbe found here."
+        ]
+      }
+    ],
+    "json": ""
+  },
+  {
+    "name": "GMapPlot",
+    "text": [
+      "Bases: bokeh.models.map_plots.MapPlot",
+      "A Bokeh Plot with a Google Map displayed underneath.",
+      "Data placed on this plot should be specified in decimal lat long coordinates e.g. 37.123, -122.404.\nIt will be automatically converted into the web mercator projection to display properly over\ngoogle maps tiles."
+    ],
+    "attrs": [
+      {
+        "name": "api_key",
+        "descs": [
+          "property type: String",
+          "Google Maps API requires an API key. See https://developers.google.com/maps/documentation/javascript/get-api-key\nfor more information on how to obtain your own."
+        ]
+      },
+      {
+        "name": "map_options",
+        "descs": [
+          "property type: Instance ( GMapOptions  )",
+          "Options for displaying the plot."
+        ]
+      }
+    ],
+    "json": "{\n  \"above\": [],\n  \"api_key\": null,\n  \"background_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"background_fill_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"below\": [],\n  \"border_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"border_fill_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"extra_x_ranges\": {},\n  \"extra_y_ranges\": {},\n  \"h_symmetry\": true,\n  \"height\": null,\n  \"hidpi\": true,\n  \"id\": \"31ce958b-d46f-45f5-bff0-f7733b96c068\",\n  \"js_callbacks\": {},\n  \"left\": [],\n  \"lod_factor\": 10,\n  \"lod_interval\": 300,\n  \"lod_threshold\": 2000,\n  \"lod_timeout\": 500,\n  \"map_options\": null,\n  \"min_border\": 5,\n  \"min_border_bottom\": null,\n  \"min_border_left\": null,\n  \"min_border_right\": null,\n  \"min_border_top\": null,\n  \"name\": null,\n  \"outline_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"outline_line_cap\": \"butt\",\n  \"outline_line_color\": {\n    \"value\": \"#e5e5e5\"\n  },\n  \"outline_line_dash\": [],\n  \"outline_line_dash_offset\": 0,\n  \"outline_line_join\": \"miter\",\n  \"outline_line_width\": {\n    \"value\": 1\n  },\n  \"plot_height\": 600,\n  \"plot_width\": 600,\n  \"renderers\": [],\n  \"right\": [],\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": {\n    \"id\": \"0ad75306-01df-464e-8834-7d8715bbc921\",\n    \"type\": \"Title\"\n  },\n  \"title_location\": \"above\",\n  \"tool_events\": {\n    \"id\": \"5e0784cc-c554-4704-82ea-aad9e88e443f\",\n    \"type\": \"ToolEvents\"\n  },\n  \"toolbar\": {\n    \"id\": \"2e328aad-0710-4476-9e54-3b9534c72578\",\n    \"type\": \"Toolbar\"\n  },\n  \"toolbar_location\": \"right\",\n  \"toolbar_sticky\": true,\n  \"v_symmetry\": false,\n  \"webgl\": false,\n  \"width\": null,\n  \"x_mapper_type\": \"auto\",\n  \"x_range\": null,\n  \"y_mapper_type\": \"auto\",\n  \"y_range\": null\n}\n\n\n  "
+  },
+  {
+    "name": "MapOptions",
+    "text": [
+      "Abstract base class for map options’ models."
+    ],
+    "attrs": [
+      {
+        "name": "lat",
+        "descs": [
+          "property type: Float",
+          "The latitude where the map should be centered."
+        ]
+      },
+      {
+        "name": "lng",
+        "descs": [
+          "property type: Float",
+          "The longitude where the map should be centered."
+        ]
+      },
+      {
+        "name": "zoom",
+        "descs": [
+          "property type: Int",
+          "The initial zoom level to use when displaying the map."
+        ]
+      }
+    ],
+    "json": ""
+  },
+  {
+    "name": "MapPlot",
+    "text": [
+      "Bases: bokeh.models.plots.Plot",
+      "Abstract base class for map plot models."
+    ],
+    "attrs": [],
+    "json": "{\n  \"above\": [],\n  \"background_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"background_fill_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"below\": [],\n  \"border_fill_alpha\": {\n    \"value\": 1.0\n  },\n  \"border_fill_color\": {\n    \"value\": \"#ffffff\"\n  },\n  \"css_classes\": null,\n  \"disabled\": false,\n  \"extra_x_ranges\": {},\n  \"extra_y_ranges\": {},\n  \"h_symmetry\": true,\n  \"height\": null,\n  \"hidpi\": true,\n  \"id\": \"9f944fe3-d6c5-4de0-909c-94fc3707344b\",\n  \"js_callbacks\": {},\n  \"left\": [],\n  \"lod_factor\": 10,\n  \"lod_interval\": 300,\n  \"lod_threshold\": 2000,\n  \"lod_timeout\": 500,\n  \"min_border\": 5,\n  \"min_border_bottom\": null,\n  \"min_border_left\": null,\n  \"min_border_right\": null,\n  \"min_border_top\": null,\n  \"name\": null,\n  \"outline_line_alpha\": {\n    \"value\": 1.0\n  },\n  \"outline_line_cap\": \"butt\",\n  \"outline_line_color\": {\n    \"value\": \"#e5e5e5\"\n  },\n  \"outline_line_dash\": [],\n  \"outline_line_dash_offset\": 0,\n  \"outline_line_join\": \"miter\",\n  \"outline_line_width\": {\n    \"value\": 1\n  },\n  \"plot_height\": 600,\n  \"plot_width\": 600,\n  \"renderers\": [],\n  \"right\": [],\n  \"sizing_mode\": \"fixed\",\n  \"tags\": [],\n  \"title\": {\n    \"id\": \"985d4472-142e-45a8-89cd-9725d2d152ca\",\n    \"type\": \"Title\"\n  },\n  \"title_location\": \"above\",\n  \"tool_events\": {\n    \"id\": \"25fba919-7e74-461e-814d-40d3b635642e\",\n    \"type\": \"ToolEvents\"\n  },\n  \"toolbar\": {\n    \"id\": \"458aa4b7-353f-478c-9666-a0975247ea56\",\n    \"type\": \"Toolbar\"\n  },\n  \"toolbar_location\": \"right\",\n  \"toolbar_sticky\": true,\n  \"v_symmetry\": false,\n  \"webgl\": false,\n  \"width\": null,\n  \"x_mapper_type\": \"auto\",\n  \"x_range\": null,\n  \"y_mapper_type\": \"auto\",\n  \"y_range\": null\n}\n\n\n  "
+  }
+]

@@ -1,0 +1,237 @@
+[
+  {
+    "name": "DataRange",
+    "text": [
+      "Bases: bokeh.models.ranges.Range",
+      "A base class for all data range types. DataRange is not\ngenerally useful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "names",
+        "descs": [
+          "property type: List ( String  )",
+          "A list of names to query for. If set, only renderers that\nhave a matching value for their name attribute will be used\nfor autoranging."
+        ]
+      },
+      {
+        "name": "renderers",
+        "descs": [
+          "property type: List ( Instance ( Renderer  ) )",
+          "An explicit list of renderers to autorange against. If unset,\ndefaults to all renderers on a plot."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"id\": \"a8b21267-2ff9-43b1-a12d-2b34d1fe26ce\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"names\": [],\n  \"renderers\": [],\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "DataRange1d",
+    "text": [
+      "Bases: bokeh.models.ranges.DataRange",
+      "An auto-fitting range in a continuous scalar dimension.\nThe upper and lower bounds are set to the min and max of the data."
+    ],
+    "attrs": [
+      {
+        "name": "bounds",
+        "descs": [
+          "property type: MinMaxBounds",
+          "The bounds that the range is allowed to go to - typically used to prevent\nthe user from panning/zooming/etc away from the data.",
+          "By default, the bounds will be None, allowing your plot to pan/zoom as far as you want.\nIf bounds are ‘auto’ they will be computed to be the same as the start and end of the DataRange1d.",
+          "Bounds are provided as a tuple of (min, max) so regardless of whether your range is\nincreasing or decreasing, the first item should be the minimum value of the range and the\nsecond item should be the maximum. Setting min > max will result in a ValueError.",
+          "If you only want to constrain one end of the plot, you can set min or max to\nNone e.g. DataRange1d(bounds=(None, 12))"
+        ]
+      },
+      {
+        "name": "default_span",
+        "descs": [
+          "property type: Float",
+          "A default width for the interval, in case start is equal to end\n(if used with a log axis, default_span is in powers of 10)."
+        ]
+      },
+      {
+        "name": "end",
+        "descs": [
+          "property type: Float",
+          "An explicitly supplied range end. If provided, will override\nautomatically computed end value."
+        ]
+      },
+      {
+        "name": "flipped",
+        "descs": [
+          "property type: Bool",
+          "Whether the range should be “flipped” from its normal direction when\nauto-ranging."
+        ]
+      },
+      {
+        "name": "follow",
+        "descs": [
+          "property type: Enum ( StartEnd  )",
+          "Configure the data to follow one or the other data extreme, with a\nmaximum range size of follow_interval.",
+          "If set to \"start\" then the range will adjust so that start always\ncorresponds to the minimum data value (or maximum, if flipped is\nTrue).",
+          "If set to \"end\" then the range will adjust so that end always\ncorresponds to the maximum data value (or minimum, if flipped is\nTrue).",
+          "If set to None (default), then auto-ranging does not follow, and\nthe range will encompass both the minimum and maximum data values.",
+          "follow cannot be used with bounds, and if set, bounds will be set to None."
+        ]
+      },
+      {
+        "name": "follow_interval",
+        "descs": [
+          "property type: Float",
+          "If follow is set to \"start\" or \"end\" then the range will\nalways be constrained to that:",
+          "is maintained."
+        ]
+      },
+      {
+        "name": "max_interval",
+        "descs": [
+          "property type: Float",
+          "The level that the range is allowed to zoom out, expressed as the\nmaximum visible interval. Note that bounds can impose an\nimplicit constraint on the maximum interval as well."
+        ]
+      },
+      {
+        "name": "min_interval",
+        "descs": [
+          "property type: Float",
+          "The level that the range is allowed to zoom in, expressed as the\nminimum visible interval. If set to None (default), the minimum\ninterval is not bound."
+        ]
+      },
+      {
+        "name": "range_padding",
+        "descs": [
+          "property type: Float",
+          "A fraction of the total range size to add as padding to\nthe range start and end."
+        ]
+      },
+      {
+        "name": "start",
+        "descs": [
+          "property type: Float",
+          "An explicitly supplied range start. If provided, will override\nautomatically computed start value."
+        ]
+      }
+    ],
+    "json": "{\n  \"bounds\": null,\n  \"callback\": null,\n  \"default_span\": 2.0,\n  \"end\": null,\n  \"flipped\": false,\n  \"follow\": null,\n  \"follow_interval\": null,\n  \"id\": \"2f01984b-60cc-4626-b3b7-774cd85db8f5\",\n  \"js_callbacks\": {},\n  \"max_interval\": null,\n  \"min_interval\": null,\n  \"name\": null,\n  \"names\": [],\n  \"range_padding\": 0.1,\n  \"renderers\": [],\n  \"start\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "FactorRange",
+    "text": [
+      "Bases: bokeh.models.ranges.Range",
+      "A range in a categorical dimension.",
+      "In addition to supplying factors keyword argument to the\nFactorRange initializer, you can also instantiate with\nthe convenience syntax:"
+    ],
+    "attrs": [
+      {
+        "name": "bounds",
+        "descs": [
+          "property type: Either ( Auto , List ( String  ), List ( Int  ) )",
+          "The bounds that the range is allowed to go to - typically used to prevent\nthe user from panning/zooming/etc away from the data.",
+          "Unlike Range1d and DataRange1d, factors do not have an order and so a min and max cannot be\nprovied in the same way. bounds accepts a list of factors, that constrain the displayed factors.",
+          "By default, bounds are None, allows unlimited panning or zooming.",
+          "If bounds='auto', bounds will be the same as factors and the plot will not be able to\npan or zoom beyond the first and last items in factors.",
+          "If you provide a list, then only the factors that are in that list will be displayed on the\nplot and the plot will not pan or zoom outside the first and last items in the shortened\nfactors list. Note the order of factors is the defining order for your plot.",
+          "Values of bounds that are not in factors are acceptable and will simply have no impact\non the plot.",
+          "Examples:",
+          "x_range = FactorRange(factors=[“apples”, “dogs”, “peaches”, “bananas”, “pigs”], bounds=’auto’)",
+          "The plot will display all the factors and you will not be able to pan left of apples or right\nof pigs.",
+          "x_range = FactorRange(factors=[“apples”, “dogs”, “peaches”, “bananas”, “pigs”], bounds=[“apples”, “bananas”, “peaches”])",
+          "The plot will display the chart with only the factors [“apples”, “peaches”, “bananas”] (in that order)\nand the plot will not pan left of apples or right of bananas."
+        ]
+      },
+      {
+        "name": "factors",
+        "descs": [
+          "property type: Either ( List ( String  ), List ( Int  ) )",
+          "A list of string or integer factors (categories) to comprise\nthis categorical range."
+        ]
+      },
+      {
+        "name": "max_interval",
+        "descs": [
+          "property type: Int",
+          "The level that the range is allowed to zoom out, expressed as the\nmaximum number of visible categories. Note that bounds can\nimpose an implicit constraint on the maximum interval as well."
+        ]
+      },
+      {
+        "name": "min_interval",
+        "descs": [
+          "property type: Int",
+          "The level that the range is allowed to zoom in, expressed as the\nminimum number of visible categories. If set to None (default),\nthe minimum interval is not bound."
+        ]
+      },
+      {
+        "name": "offset",
+        "descs": [
+          "property type: Float",
+          "An offset to the (synthetic) range (default: 0)"
+        ]
+      }
+    ],
+    "json": "{\n  \"bounds\": null,\n  \"callback\": null,\n  \"factors\": [],\n  \"id\": \"cc6eda92-09d5-477a-a224-2892c6004c3b\",\n  \"js_callbacks\": {},\n  \"max_interval\": null,\n  \"min_interval\": null,\n  \"name\": null,\n  \"offset\": 0,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "Range",
+    "text": [
+      "Bases: bokeh.model.Model",
+      "A base class for all range types. Range is not generally\nuseful to instantiate on its own."
+    ],
+    "attrs": [
+      {
+        "name": "callback",
+        "descs": [
+          "property type: Instance ( Callback  )",
+          "A callback to run in the browser whenever the range is updated."
+        ]
+      }
+    ],
+    "json": "{\n  \"callback\": null,\n  \"id\": \"9d6f08af-0593-490d-a0fb-7bcd13d8e68d\",\n  \"js_callbacks\": {},\n  \"name\": null,\n  \"tags\": []\n}\n\n\n  "
+  },
+  {
+    "name": "Range1d",
+    "text": [
+      "Bases: bokeh.models.ranges.Range",
+      "A fixed, closed range [start, end] in a continuous scalar\ndimension.",
+      "In addition to supplying start and end keyword arguments\nto the Range1d initializer, you can also instantiate with\nthe convenience syntax:"
+    ],
+    "attrs": [
+      {
+        "name": "bounds",
+        "descs": [
+          "property type: MinMaxBounds",
+          "The bounds that the range is allowed to go to - typically used to prevent\nthe user from panning/zooming/etc away from the data.",
+          "If set to 'auto', the bounds will be computed to the start and end of the Range.",
+          "Bounds are provided as a tuple of (min, max) so regardless of whether your range is\nincreasing or decreasing, the first item should be the minimum value of the range and the\nsecond item should be the maximum. Setting min > max will result in a ValueError.",
+          "By default, bounds are None and your plot to pan/zoom as far as you want. If you only\nwant to constrain one end of the plot, you can set min or max to None.",
+          "Examples:"
+        ]
+      },
+      {
+        "name": "end",
+        "descs": [
+          "property type: Either ( Float , Datetime , Int  )",
+          "The end of the range."
+        ]
+      },
+      {
+        "name": "max_interval",
+        "descs": [
+          "property type: Either ( Float , TimeDelta , Int  )",
+          "The level that the range is allowed to zoom out, expressed as the\nmaximum visible interval. Can be a timedelta. Note that bounds can\nimpose an implicit constraint on the maximum interval as well."
+        ]
+      },
+      {
+        "name": "min_interval",
+        "descs": [
+          "property type: Either ( Float , TimeDelta , Int  )",
+          "The level that the range is allowed to zoom in, expressed as the\nminimum visible interval. If set to None (default), the minimum\ninterval is not bound. Can be a timedelta."
+        ]
+      },
+      {
+        "name": "start",
+        "descs": [
+          "property type: Either ( Float , Datetime , Int  )",
+          "The start of the range."
+        ]
+      }
+    ],
+    "json": "{\n  \"bounds\": null,\n  \"callback\": null,\n  \"end\": 1,\n  \"id\": \"386d059f-3cb3-4bbd-86dd-edc7b9698e72\",\n  \"js_callbacks\": {},\n  \"max_interval\": null,\n  \"min_interval\": null,\n  \"name\": null,\n  \"start\": 0,\n  \"tags\": []\n}\n\n\n  "
+  }
+]
